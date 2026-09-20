@@ -109,6 +109,21 @@ dialog{background:#20252e;border-color:#4a5972;box-shadow:0 20px 100px #0008,0 0
 #side-hours-bar{background:#65b7ff;box-shadow:0 0 10px #65b7ff55}
 .side-hours .side-foot{flex-wrap:wrap;gap:5px 12px;line-height:1.5}
 #side-hours-left{font-size:11px}
+/* Keep wide examples inside their own scrollers instead of expanding the chapter grid. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.lessons{grid-template-columns:minmax(0,1fr)}
+.chapter-group,.lesson,.lesson-body{min-width:0;max-width:100%}
+.lesson>summary>span:nth-child(2){min-width:0;flex:1;overflow-wrap:anywhere}
+.lesson>summary>.chevron{flex:none}
+.chapter-index button .toc-title{min-width:0;overflow-wrap:anywhere}
+.lesson-body{overflow-wrap:anywhere}
+.table-scroll,.code-wrap{min-width:0;max-width:100%}
+.code-wrap pre{max-width:100%;white-space:pre;overflow-wrap:normal;overflow-x:auto}
+.resources a{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.module-heading>div{min-width:0;overflow-wrap:anywhere}
+.module-heading>.module-icon{flex:none}
+.module-bottom{flex-wrap:wrap}
+@media(max-width:530px){.lesson>summary{padding:17px 15px;gap:10px}.lesson>summary .lesson-title{line-height:1.5}.module-bottom>*{flex:1}}
 </style>
 </head>
 <body>
