@@ -103,6 +103,11 @@ dialog{background:#20252e;border-color:#4a5972;box-shadow:0 20px 100px #0008,0 0
 @media(max-width:530px){.hero .orbit{opacity:.22}}
 @media(prefers-reduced-motion:reduce){.hero::after{animation:none;opacity:0}}
 
+.side-hours{margin-top:21px;padding-top:18px;border-top:1px solid var(--line)}
+#side-hours-percent{color:#65b7ff}
+#side-hours-bar{background:#65b7ff;box-shadow:0 0 10px #65b7ff55}
+.side-hours .side-foot{flex-wrap:wrap;gap:5px 12px;line-height:1.5}
+#side-hours-left{font-size:11px}
 </style>
 </head>
 <body>
@@ -114,7 +119,10 @@ dialog{background:#20252e;border-color:#4a5972;box-shadow:0 20px 100px #0008,0 0
 <nav id="main-nav" aria-label="Основные разделы"></nav>
 <div class="nav-label">РАЗДЕЛЫ КОНСПЕКТА</div>
 <nav class="topic-nav" id="topic-nav" aria-label="Разделы конспекта" role="tablist" aria-orientation="vertical"></nav>
-<div class="side-bottom"><div class="card-top"><span class="small">Изучение конспекта</span><span id="side-percent" class="small" style="color:var(--lime)">0%</span></div><div class="bar" style="margin-top:11px"><span id="side-bar"></span></div><div class="side-foot"><span id="side-done">Начало пути</span><button data-action="settings" aria-label="Настройки прогресса">Настройки ↗</button></div></div>
+<div class="side-bottom">
+<div class="card-top"><span class="small">Изучение конспекта</span><span id="side-percent" class="small" style="color:var(--lime)">0%</span></div><div class="bar" style="margin-top:11px"><span id="side-bar"></span></div><div class="side-foot"><span id="side-done">Начало пути</span><button data-action="settings" aria-label="Настройки прогресса">Настройки ↗</button></div>
+<div class="side-hours" aria-label="Прогресс по учебным часам"><div class="card-top"><span class="small">Учебные часы</span><span id="side-hours-percent" class="small">0%</span></div><div class="bar" style="margin-top:11px" role="progressbar" aria-label="Учебные часы" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="side-hours-progress"><span id="side-hours-bar"></span></div><div class="side-foot"><span id="side-hours-done"></span><span id="side-hours-left"></span></div></div>
+</div>
 </aside>
 <div class="workspace">
 <header class="topbar"><button class="round-btn mobile-menu" id="menu-toggle" aria-label="Открыть меню" aria-expanded="false" data-icon="menu"></button><div class="crumb">Моё пространство <span>/</span> <b style="font-weight:500;color:#dce0d4">Конспект</b></div><label class="search"><span data-icon="search"></span><input id="search" type="search" placeholder="Найти тему или команду" aria-label="Поиск по конспекту" autocomplete="off"><span class="key">/</span></label><button class="round-btn" data-action="settings" aria-label="Сохранение и настройки" title="Сохранение и настройки" data-icon="sliders"></button><div class="avatar" title="Конспект QA">QA</div></header>
@@ -9411,6 +9419,12 @@ function renderNav(){
   $('#main-nav').innerHTML=[['overview','home','Конспект'],['bookmarks','bookmark','Закладки'],['portfolio','rocket','Pet-проект']].map(([id,i,t])=>`<button class="nav-item ${currentView===id?'active':''}" data-view="${id}" ${currentView===id?'aria-current="page"':''}>${icon(i)}${t}${id==='bookmarks'?`<span class="nav-count">${state.saved.length||''}</span>`:''}</button>`).join('');
   $('#topic-nav').innerHTML=MODULES.map((m,i)=>`<button id="tab-${m.id}" role="tab" aria-selected="${currentView===m.id}" tabindex="${currentView===m.id||(!MODULES.some(x=>x.id===currentView)&&i===0)?0:-1}" aria-controls="view" class="nav-item ${currentView===m.id?'active':''}" data-view="${m.id}">${icon(m.icon)}<span>${esc(m.title)}</span>${count(m)===m.lessons.length?'<span class="nav-count" style="color:var(--lime)">✓</span>':''}</button>`).join('');
   $('#side-percent').textContent=percent()+'%';$('#side-bar').style.width=percent()+'%';$('#side-done').textContent=`${state.done.length} из ${ALL.length} глав`;
+  const time=studyTime(),hourPercent=time.total?Math.round(time.done/time.total*100):0;
+  $('#side-hours-percent').textContent=hourPercent+'%';$('#side-hours-bar').style.width=hourPercent+'%';
+  $('#side-hours-done').textContent=`${hours(time.done)} из ${hours(time.total)} ч`;
+  $('#side-hours-left').textContent=`Осталось ${duration(time.total-time.done)}`;
+  $('#side-hours-progress').setAttribute('aria-valuenow',hourPercent);
+  $('#side-hours-progress').setAttribute('aria-valuetext',`${duration(time.done)} из ${duration(time.total)}; осталось ${duration(time.total-time.done)}`);
   if(focused?.startsWith('tab-'))document.getElementById(focused)?.focus({preventScroll:true});
 }
 function footer(){return `<footer class="page-footer"><span>${icon('book')}Конспект QA · теория и примеры</span><span>Pet-проект учитывается отдельно</span></footer>`;}
