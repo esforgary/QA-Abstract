@@ -124,6 +124,65 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .module-heading>.module-icon{flex:none}
 .module-bottom{flex-wrap:wrap}
 @media(max-width:530px){.lesson>summary{padding:17px 15px;gap:10px}.lesson>summary .lesson-title{line-height:1.5}.module-bottom>*{flex:1}}
+/* Separate progress cards and the progress-driven skills profile. */
+.progress-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0}
+.progress-card.metric-card{padding:19px 22px;min-height:0}
+.metric-card .card-top{margin-bottom:12px}
+.metric-card .card-top h2{font-size:15px}
+.metric-body{display:grid;grid-template-columns:88px minmax(0,1fr);align-items:center;gap:22px}
+.metric-body .ring{width:88px;height:88px;margin:0}
+.metric-body .ring-label strong{font-size:25px}
+.metric-info{min-width:0;text-align:left}
+.metric-info .chart-count{font-size:24px}
+.metric-info p{font-size:12px;color:#aeb8ca;margin-top:2px}
+.metric-info small{display:block;font-size:12px;color:#d2daea;margin-top:7px}
+.stats{grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr) minmax(0,1fr)}
+.stats .stat{min-width:0}.stats .stat>div:not(.stat-icon){min-width:0}
+.stats .stat strong{font-size:19px;overflow-wrap:anywhere}
+.resume-launch{width:100%;text-align:left;transition:background .25s,border-color .25s,box-shadow .25s}
+.resume-launch:hover{background:#282d36;border-color:#70d8cf;box-shadow:0 0 22px #70d8cf1c}
+.resume-launch .stat-icon{--icon-color:#70d8cf}.resume-launch .stat-icon svg{color:#70d8cf}
+.resume-launch .launch-arrow{margin-left:auto;color:#70d8cf!important}
+.resume-sheet{border:1px solid #3d424d;border-radius:23px;background:#1d2027;overflow:hidden;box-shadow:0 16px 50px #0003}
+.resume-header{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:32px 34px;border-bottom:1px solid #3a404c;background:linear-gradient(120deg,#252932,#1d2027)}
+.resume-heading{min-width:0}.resume-heading .eyebrow{color:#b5e274;margin-bottom:9px}
+.resume-heading h2{font-size:32px;line-height:1.15;letter-spacing:-1px;color:#f1f4fa}
+.resume-heading>p{color:#abb7cc;font-size:14px;margin-top:12px}
+.resume-meta{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:20px;color:#9aa9c0;font-size:12px}
+.resume-meta strong{color:#e0e8f5;font-weight:600}
+.resume-emblem{width:112px;height:112px;flex:none;position:relative;isolation:isolate;display:grid;place-items:center;border-radius:28px;overflow:hidden;background:linear-gradient(125deg,#dcff64,#abeac4);box-shadow:0 0 24px #c5ed6420}
+.resume-emblem::before,.resume-emblem::after{content:"";position:absolute;inset:10px;border:1px solid #1928192b;border-radius:50%;transform:rotate(-30deg) scaleX(.7)}
+.resume-emblem::after{transform:rotate(30deg) scaleX(.7)}
+.resume-emblem svg{width:56px;height:56px;color:#172018;stroke-width:1.2;filter:none;animation:float 7s ease-in-out infinite}
+.resume-columns{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(255px,1fr)}
+.resume-details{padding:29px 32px 34px;min-width:0}
+.resume-section-title{font-size:16px;letter-spacing:0;color:#e1e8f5;padding-bottom:15px;border-bottom:1px solid #3a4251;margin-bottom:23px}
+.resume-skill-detail{margin-top:26px;animation:arrive .35s both;min-width:0}
+.resume-skill-detail+.resume-skill-detail{padding-top:25px;border-top:1px solid #343c4b}
+.resume-skill-heading{display:flex;gap:11px;align-items:center;margin-bottom:10px}
+.resume-skill-heading h4{font-size:17px;line-height:1.4;margin:0;font-weight:600;letter-spacing:-.2px;color:#e8edf6;overflow-wrap:anywhere}
+.resume-skill-heading .icon{width:20px;height:20px;color:var(--accent)}
+.resume-skill-detail>p{font-size:13px;color:#acb9cf;line-height:1.75}
+.resume-skill-detail ul{padding-left:17px;margin:13px 0 0;color:#cbd4e4;font-size:13px;line-height:1.8}
+.resume-skill-detail li{padding-left:3px;margin:7px 0;overflow-wrap:anywhere}
+.resume-skill-detail li::marker{color:var(--accent)}
+.resume-empty{padding:25px 0 35px;color:#a2afc5;font-size:13px;line-height:1.8;max-width:440px}
+.resume-empty>.icon{width:32px;height:32px;color:#8498b7;margin-bottom:14px}
+.resume-empty h4{font-size:17px;font-weight:500;color:#d4deee;margin:0 0 10px}
+.resume-skills{background:#191d24;border-left:1px solid #38404e;padding:29px 24px 30px;min-width:0}
+.resume-skills .resume-section-title{margin-bottom:7px}
+.resume-skills-caption{font-size:11px;color:#8393ad;margin-bottom:15px}
+.resume-skill{display:block;width:100%;padding:14px 0;text-align:left;background:transparent;border-bottom:1px solid #2e3745;transition:background .2s}
+.resume-skill:last-child{border-bottom:0}.resume-skill:hover{background:#262d3980}
+.resume-skill-top{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:12px;font-weight:550}
+.resume-skill-top .icon{width:17px;height:17px;color:var(--accent)}
+.resume-skill-top strong{font-size:12px;line-height:1.5;flex:1;min-width:0;font-weight:550;color:#d8e1f0;overflow-wrap:anywhere}
+.resume-skill-top>span{font-size:11px;color:var(--accent);font-variant-numeric:tabular-nums}
+.resume-skill small{display:block;font-size:10px;color:#91a1ba;line-height:1.6;margin-bottom:9px}
+.resume-skill .bar{height:3px}.resume-skill.is-complete .resume-skill-top strong{color:#f0f4fc}
+@media(max-width:1100px){.resume-header{padding:27px}.resume-details{padding:25px}.resume-skills{padding:25px 20px}.resume-columns{grid-template-columns:minmax(0,1.4fr) minmax(235px,1fr)}.stats .stat{padding:15px 12px;gap:10px}.stats .stat strong{font-size:17px}}
+@media(max-width:980px){.progress-stack{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-body{gap:17px}.progress-card.metric-card{padding:20px}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stats .stat{flex-wrap:wrap}.stats .launch-arrow{display:none}}
+@media(max-width:650px){.resume-columns{grid-template-columns:minmax(0,1fr)}.resume-skills{border-left:0;border-top:1px solid #38404e}.resume-header{padding:24px 20px;gap:18px}.resume-heading h2{font-size:27px}.resume-emblem{width:80px;height:80px;border-radius:21px}.resume-emblem svg{width:43px;height:43px}.resume-details,.resume-skills{padding:24px 20px}.resume-heading>p{font-size:12px}.resume-meta{gap:7px 12px;font-size:11px}.progress-stack{grid-template-columns:minmax(0,1fr)}.metric-body{grid-template-columns:88px minmax(0,1fr);gap:25px}.stats{grid-template-columns:minmax(0,1fr)}.stats .stat{padding:16px;flex-wrap:nowrap}.stats .stat strong{font-size:18px}.stats .launch-arrow{display:block}.stats .stat-icon{margin:0}.stats .stat{display:flex}.resume-sheet{border-radius:18px}}
 </style>
 </head>
 <body>
@@ -9432,7 +9491,7 @@ function percent(m){return Math.round((m?count(m):state.done.length)/(m?m.lesson
 function paintIcons(root=document){root.querySelectorAll('[data-icon]').forEach(e=>e.innerHTML=icon(e.dataset.icon));}
 function renderNav(){
   const focused=document.activeElement?.id;
-  $('#main-nav').innerHTML=[['overview','home','Конспект'],['bookmarks','bookmark','Закладки'],['portfolio','rocket','Pet-проект']].map(([id,i,t])=>`<button class="nav-item ${currentView===id?'active':''}" data-view="${id}" ${currentView===id?'aria-current="page"':''}>${icon(i)}${t}${id==='bookmarks'?`<span class="nav-count">${state.saved.length||''}</span>`:''}</button>`).join('');
+  $('#main-nav').innerHTML=[['overview','home','Конспект'],['bookmarks','bookmark','Закладки'],['portfolio','rocket','Pet-проект'],['resume','file','Резюме']].map(([id,i,t])=>`<button class="nav-item ${currentView===id?'active':''}" data-view="${id}" ${currentView===id?'aria-current="page"':''}>${icon(i)}${t}${id==='bookmarks'?`<span class="nav-count">${state.saved.length||''}</span>`:''}</button>`).join('');
   $('#topic-nav').innerHTML=MODULES.map((m,i)=>`<button id="tab-${m.id}" role="tab" aria-selected="${currentView===m.id}" tabindex="${currentView===m.id||(!MODULES.some(x=>x.id===currentView)&&i===0)?0:-1}" aria-controls="view" class="nav-item ${currentView===m.id?'active':''}" data-view="${m.id}">${icon(m.icon)}<span>${esc(m.title)}</span>${count(m)===m.lessons.length?'<span class="nav-count" style="color:var(--lime)">✓</span>':''}</button>`).join('');
   $('#side-percent').textContent=percent()+'%';$('#side-bar').style.width=percent()+'%';$('#side-done').textContent=`${state.done.length} из ${ALL.length} глав`;
   const chaptersLeft=ALL.length-state.done.length;
@@ -9466,7 +9525,7 @@ function animateDetail(detail,force){
 }
 function closeMenu(){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');}
 function go(id,lesson){
-  const target=MODULES.some(m=>m.id===id)||['overview','modules','bookmarks','portfolio'].includes(id)?id:'overview';
+  const target=MODULES.some(m=>m.id===id)||['overview','modules','bookmarks','portfolio','resume'].includes(id)?id:'overview';
   const validLesson=ALL.find(l=>l.id===lesson&&l.module.id===target);
   if(validLesson){state.last=lesson;persist();}
   const hash='#'+target+(validLesson?'/'+lesson:'');
@@ -9496,11 +9555,125 @@ function renderOverview(){
   const ring=(label,pct,color)=>`<div class="ring" style="--chart-color:${color}" role="progressbar" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50"/><circle class="fill" cx="60" cy="60" r="50" style="stroke-dashoffset:${314.16*(1-pct/100)}"/></svg><div class="ring-label"><strong>${pct}<span>%</span></strong></div></div>`;
   $('#view').innerHTML=`<section class="view"><div class="page-heading"><div><h1>Конспект QA-инженера<span class="title-dot">.</span></h1><p class="subtitle">${MODULES.length} разделов · ${ALL.length} ${chapterWord(ALL.length)} · ${duration(time.total)} по учебному плану</p></div><span class="pill">${icon('book')}Теория и примеры</span></div>
   <div class="hero-grid"><article class="hero" style="${moduleStyle(resume.module)}"><div class="hero-copy"><div class="eyebrow">${state.last?'ПОСЛЕДНЯЯ ОТКРЫТАЯ ГЛАВА':'ПЕРВАЯ ГЛАВА'}</div><h2>${esc(resume.title)}</h2><p>${esc(resume.module.title)} · ${esc(resume.summary)}</p><button class="primary" data-view="${resume.module.id}" data-lesson="${resume.id}">${state.last?'Продолжить чтение':'Открыть главу'}${icon('arrow')}</button></div><div class="orbit" aria-hidden="true"><div class="orbit-ring">${icon(resume.module.icon)}</div></div></article>
-  <article class="progress-card"><div class="card-top"><h2>Общий прогресс</h2>${icon('target')}</div><div class="dual-progress"><section class="chart-cell"><h3>Этапы</h3>${ring('Пройденные главы',chapterPercent,'#ccf64b')}<strong class="chart-count" id="overview-chapters">${state.done.length} <span>/ ${ALL.length}</span></strong><p>глав изучено</p><small>Осталось ${ALL.length-state.done.length}</small></section><section class="chart-cell"><h3>Часы</h3>${ring('Часы по учебному плану',hourPercent,'#65b7ff')}<strong class="chart-count" id="overview-hours" data-minutes-done="${time.done}" data-minutes-total="${time.total}">${hours(time.done)} <span>/ ${hours(time.total)} ч</span></strong><p>по изученным главам</p><small>Осталось ${duration(time.total-time.done)}</small></section></div><p class="time-note">Время на чтение и повторение примеров — оценка по длительности глав.</p></article></div>
-  <div class="stats"><div class="stat"><div class="stat-icon">${icon('layers')}</div><div><strong>${MODULES.filter(m=>count(m)===m.lessons.length).length} / ${MODULES.length}</strong><span>разделов изучено</span></div></div><button class="stat project-launch" data-view="portfolio" aria-label="Открыть pet-проект"><div class="stat-icon">${icon('rocket')}</div><div><strong>Pet-проект RealWorld</strong><span>24 этапа · ${state.projectDone.length} выполнено</span></div><span class="launch-arrow">${icon('arrow')}</span></button></div>
+  <div class="progress-stack"><article class="progress-card metric-card"><div class="card-top"><h2>Этапы</h2>${icon('layers')}</div><div class="metric-body">${ring('Пройденные главы',chapterPercent,'#ccf64b')}<div class="metric-info"><strong class="chart-count" id="overview-chapters">${state.done.length} <span>/ ${ALL.length}</span></strong><p>глав изучено</p><small>Осталось ${ALL.length-state.done.length} ${chapterWord(ALL.length-state.done.length)}</small></div></div></article><article class="progress-card metric-card"><div class="card-top"><h2>Часы</h2>${icon('clock')}</div><div class="metric-body">${ring('Часы по учебному плану',hourPercent,'#65b7ff')}<div class="metric-info"><strong class="chart-count" id="overview-hours" data-minutes-done="${time.done}" data-minutes-total="${time.total}">${hours(time.done)} <span>/ ${hours(time.total)} ч</span></strong><p>по изученным главам</p><small>Осталось ${duration(time.total-time.done)}</small></div></div></article></div></div>
+  <div class="stats"><div class="stat"><div class="stat-icon">${icon('layers')}</div><div><strong>${MODULES.filter(m=>count(m)===m.lessons.length).length} / ${MODULES.length}</strong><span>разделов изучено</span></div></div><button class="stat project-launch" data-view="portfolio" aria-label="Открыть pet-проект"><div class="stat-icon">${icon('rocket')}</div><div><strong>Pet-проект RealWorld</strong><span>24 этапа · ${state.projectDone.length} выполнено</span></div><span class="launch-arrow">${icon('arrow')}</span></button><button class="stat resume-launch" data-view="resume" aria-label="Открыть резюме"><div class="stat-icon">${icon('file')}</div><div><strong>Резюме</strong><span>Навыки и инструменты</span></div><span class="launch-arrow">${icon('arrow')}</span></button></div>
   <div class="dashboard-columns"><section><div class="section-head"><h2>Разделы конспекта</h2><button class="text-btn" data-view="modules">Все ${MODULES.length} ${icon('arrow')}</button></div>${filterButtons()}<div class="module-grid">${filteredModules().map(moduleCard).join('')}</div></section><aside class="dashboard-aside"><section class="panel"><div class="card-top"><h2>Маршрут</h2>${icon('layers')}</div>${renderLearningRoute(resume.module.id)}</section><section class="panel reading-help"><h2>Поиск по командам</h2><div class="quick-queries">${['LEFT JOIN','git revert','pytest','curl','JQL'].map(q=>`<button data-query="${q}">${q}</button>`).join('')}</div></section></aside></div>${footer()}</section>`;
 }
 function renderModules(){$('#view').innerHTML=`<section class="view"><div class="page-heading"><div><h1>Разделы конспекта</h1><p class="subtitle">${MODULES.length} разделов · ${ALL.length} ${chapterWord(ALL.length)} · pet-проект вынесен отдельно.</p></div></div>${filterButtons()}<div class="module-grid wide-grid">${filteredModules().map(moduleCard).join('')}</div>${footer()}</section>`;}
+const RESUME_SKILLS = {
+  "foundations": {
+    "title": "Теория QA и тест-дизайн",
+    "summary": "Требования, тест-дизайн, риски и диагностика дефектов",
+    "bullets": [
+      "Понимание QA, QC, принципов тестирования, SDLC и STLC; роли тестирования в Agile, Scrum и Kanban.",
+      "Анализ требований и критериев приёмки, определение ожидаемого результата и проверяемых условий.",
+      "Выбор уровней и видов тестирования: функциональные и нефункциональные проверки, smoke, sanity, retest и regression.",
+      "Тест-дизайн: классы эквивалентности, граничные значения, таблицы решений, переходы состояний и pairwise.",
+      "Исследовательское тестирование, подготовка данных, оценка рисков и покрытия; локализация дефектов по наблюдениям."
+    ]
+  },
+  "documentation": {
+    "title": "Тестовая документация и Jira",
+    "summary": "Тест-планы, кейсы, баг-репорты, Jira и JQL",
+    "bullets": [
+      "Структура тест-плана, тест-кейсов, чек-листов и отчёта о тестировании; связь требований, проверок и результатов.",
+      "Оформление воспроизводимых баг-репортов с окружением, шагами, ожидаемым и фактическим результатом, доказательствами.",
+      "Различение severity и priority; проверка исправлений и переоткрытие дефектов при повторном воспроизведении.",
+      "Работа с задачами Jira: связи, вложения и workflow; поиск и фильтрация задач с помощью JQL."
+    ]
+  },
+  "web": {
+    "title": "Web и Chrome DevTools",
+    "summary": "HTTP, DOM, CSS / XPath и диагностика в браузере",
+    "bullets": [
+      "Понимание клиент-серверной архитектуры, пути запроса от URL до страницы, HTTP-методов, кодов ответа и заголовков.",
+      "Проверка HTML-форм и DOM; поиск элементов с помощью CSS-селекторов и XPath.",
+      "Диагностика интерфейса через Elements и Console, анализ запросов и ответов в Network, замеры загрузки в Performance.",
+      "Проверка cookies, сессий, JWT, локальных хранилищ и кэша; понимание ограничений CORS.",
+      "Проверка адаптивности, доступности и поведения приложения в разных браузерах."
+    ]
+  },
+  "api": {
+    "title": "Тестирование API и Postman",
+    "summary": "REST, OpenAPI, CRUD, коллекции и проверки ответов",
+    "bullets": [
+      "Чтение REST-контрактов Swagger / OpenAPI: ресурсы, параметры, JSON, обязательные поля и ожидаемые ответы.",
+      "Составление CRUD-запросов в Postman, настройка окружений и переменных, работа с Basic, Bearer, API key и cookies.",
+      "Проверки pm.test: статус, заголовки, типы и содержимое ответа, JSON Schema и бизнес-условия.",
+      "Цепочки запросов с передачей id и токена, pre-request scripts, запуск коллекций с CSV- и JSON-данными.",
+      "Негативные сценарии, права доступа, пагинация и идемпотентность; воспроизведение HTTP-запросов через curl."
+    ]
+  },
+  "sql": {
+    "title": "SQL и проверка данных",
+    "summary": "Выборки, JOIN, агрегаты, транзакции и целостность данных",
+    "bullets": [
+      "SQL-запросы в SQLite: SELECT, WHERE, сортировка, пагинация, DISTINCT, работа с NULL, COALESCE и CASE.",
+      "Связывание таблиц через INNER JOIN и LEFT JOIN; агрегаты COUNT, SUM, AVG, группировка и HAVING.",
+      "Подзапросы, EXISTS, UNION и CTE для составных выборок и проверки связанных данных.",
+      "INSERT, UPDATE и DELETE; транзакции и ROLLBACK, первичные и внешние ключи, ограничения UNIQUE и CHECK.",
+      "Поиск дубликатов и записей без связей, сопоставление API и БД; основы индексов и EXPLAIN QUERY PLAN."
+    ]
+  },
+  "git": {
+    "title": "Git и совместная работа с кодом",
+    "summary": "Коммиты, ветки, pull request и разрешение конфликтов",
+    "bullets": [
+      "Работа с рабочей директорией, индексом и историей Git: status, diff, add, commit и log.",
+      "Ветки, switch и merge; синхронизация с удалённым репозиторием через clone, fetch, pull и push.",
+      "Pull request, чтение изменений при ревью и разрешение конфликтов слияния.",
+      "Применение .gitignore, stash и тегов; различие restore, revert и reset при отмене изменений."
+    ]
+  },
+  "linux": {
+    "title": "Linux и командная строка",
+    "summary": "Файлы, права, логи, процессы и сетевая диагностика",
+    "bullets": [
+      "Навигация по файловой системе, операции с файлами и каталогами, права доступа и владельцы.",
+      "Чтение и поиск в логах с tail, grep и find; конвейеры, перенаправление потоков, sort, uniq, cut, awk и sed.",
+      "Проверка процессов и ресурсов, сигналы и фоновые задачи; переменные окружения и основы shell-скриптов.",
+      "HTTP-запросы через curl, сетевая диагностика, SSH, службы и системные журналы, работа с архивами."
+    ]
+  },
+  "python": {
+    "title": "Python, Pytest и UI-автотесты",
+    "summary": "Python, requests, Pytest, Playwright и основы Selenium",
+    "bullets": [
+      "Основы Python: типы и коллекции, условия и циклы, функции, исключения, классы, dataclass и композиция; модули, виртуальные среды и зависимости.",
+      "Работа с файлами, pathlib, JSON и CSV, аннотациями типов и отладчиком; HTTP-запросы и API-клиент на requests.",
+      "Pytest: assertions, параметризация, fixtures, scope, conftest и teardown; tmp_path, monkeypatch, caplog и markers.",
+      "API-автотесты с позитивными и негативными сценариями; UI-проверки на Playwright, устойчивые локаторы и ожидания, формы, файлы, iframe и вкладки.",
+      "Изоляция тестов и Page Object Model, анализ скриншотов, trace и видео; основы Selenium и explicit wait."
+    ]
+  },
+  "cicd": {
+    "title": "CI/CD для автотестов",
+    "summary": "GitHub Actions, отчёты, диагностика pipeline и Docker",
+    "bullets": [
+      "Структура CI/CD pipeline и GitHub Actions workflow для запуска Python- и Playwright-тестов.",
+      "Настройка окружения, зависимостей, секретов, matrix и тестовых данных для воспроизводимых запусков.",
+      "Интерпретация кодов завершения Pytest, результатов JUnit и Allure; разбор ошибок по логам и артефактам pipeline.",
+      "Основы Docker: image и container, Dockerfile и .dockerignore, сборка и запуск контейнера с API-тестами, особенности сети."
+    ]
+  },
+  "platforms": {
+    "title": "Тестирование Mobile и Desktop",
+    "summary": "Жизненный цикл, установка, разрешения, сеть и Android-логи",
+    "bullets": [
+      "Различия web, native и hybrid-приложений; проверки установки, обновления, удаления и сохранности данных.",
+      "Проверка запуска, фонового режима и восстановления; ориентации, клавиатуры, deep links и навигации.",
+      "Проверка разрешений ОС, файлов и процессов, offline-режима, таймаутов и синхронизации при изменении сети.",
+      "Диагностика Android через ADB и Logcat; нефункциональные проверки мобильных и desktop-приложений."
+    ]
+  }
+};
+function renderResume(){
+  const completed=MODULES.filter(m=>count(m)===m.lessons.length),time=studyTime();
+  $('#view').innerHTML=`<section class="view"><button class="text-btn back-btn" data-view="overview">${icon('back')}К конспекту</button><div class="page-heading"><div><h1>Резюме<span class="title-dot">.</span></h1><p class="subtitle">Навыки по изученным разделам</p></div></div>
+  <article class="resume-sheet" aria-label="Резюме QA-инженера"><header class="resume-header"><div class="resume-heading"><div class="eyebrow">ПРОФИЛЬ НАВЫКОВ</div><h2>QA Engineer</h2><p>Ручное тестирование · Автоматизация на Python</p><div class="resume-meta"><span><strong>${completed.length} / ${MODULES.length}</strong> разделов изучено</span><span><strong>${state.done.length} / ${ALL.length}</strong> глав</span><span><strong>${hours(time.done)} / ${hours(time.total)} ч</strong></span></div></div><div class="resume-emblem" aria-hidden="true">${icon('layers')}</div></header>
+  <div class="resume-columns"><section class="resume-details" aria-labelledby="resume-details-heading"><h3 id="resume-details-heading" class="resume-section-title">Подробные навыки</h3>${completed.length?completed.map(m=>{const s=RESUME_SKILLS[m.id];return `<section class="resume-skill-detail" data-skill-details="${m.id}" style="${moduleStyle(m)}"><div class="resume-skill-heading">${icon(m.icon)}<h4>${esc(s.title)}</h4></div><p>${esc(s.summary)}</p><ul>${s.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></section>`;}).join(''):`<div class="resume-empty">${icon('file')}<h4>Пока нет завершённых разделов</h4><p>Подробное описание навыка появляется здесь, когда изучены все главы соответствующего раздела. Текущий прогресс каждого навыка — в кратком списке.</p></div>`}</section>
+  <aside class="resume-skills" aria-labelledby="resume-skills-heading"><h3 id="resume-skills-heading" class="resume-section-title">Навыки и инструменты</h3><p class="resume-skills-caption">Прогресс изучения</p>${MODULES.map(m=>{const done=count(m),pct=percent(m);return `<button class="resume-skill ${done===m.lessons.length?'is-complete':''}" data-view="${m.id}" data-skill="${m.id}" style="${moduleStyle(m)}" aria-label="${esc(m.title)}: изучено ${done} из ${m.lessons.length} глав, ${pct}%"><span class="resume-skill-top">${icon(m.icon)}<strong>${esc(m.title)}</strong><span>${pct}%</span></span><small>${esc(m.tags.slice(0,3).join(' · '))}</small><span class="bar" role="progressbar" aria-label="${esc(m.title)}" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></span></button>`;}).join('')}</aside></div></article>${footer()}</section>`;
+}
 // Offline lexical highlighting. Every token is escaped before insertion.
 function highlightCode(source,language='text'){
   const lang=String(language).toLowerCase().trim().split(/\s/)[0];
@@ -9574,7 +9747,7 @@ function resultButton(l){return `<button class="result-item" data-view="${l.modu
 function renderBookmarks(){$('#view').innerHTML=`<section class="view"><div class="page-heading"><div><h1>Закладки</h1><p class="subtitle">Сохранённые главы и примеры.</p></div></div>${state.saved.length?ALL.filter(l=>state.saved.includes(l.id)).map(resultButton).join(''):`<div class="empty">${icon('bookmark')}<h2>Закладок пока нет</h2><p>Сохранённые через кнопку «В закладки» главы появятся здесь.</p><button class="primary" style="margin-top:23px" data-view="modules">Открыть конспект ${icon('arrow')}</button></div>`}${footer()}</section>`;}
 const searchable=ALL.map(l=>({l,text:[l.title,l.summary,l.module.title,...l.module.tags,...l.blocks.flatMap(b=>[b.text,b.title,b.code,b.caption,...(b.items||[]),...(b.headers||[]),...(b.rows||[]).flat()]),l.practice,l.answer].filter(Boolean).join(' ').toLocaleLowerCase('ru')}));
 function renderSearch(q){currentView='search';renderNav();const words=q.toLocaleLowerCase('ru').split(/\s+/);const found=searchable.filter(({text})=>words.every(w=>text.includes(w))).map(x=>x.l);$('#view').innerHTML=`<section class="view"><div class="page-heading"><div><h1>Поиск по конспекту</h1><p class="subtitle">«${esc(q)}» · найдено ${found.length}</p></div></div>${found.length?found.map(resultButton).join(''):`<div class="empty">${icon('search')}<h2>Ничего не найдено</h2><p>Поиск работает по названиям команд, терминов и инструментов.</p></div>`}</section>`;}
-function renderRoute(){const [id,lesson]=location.hash.slice(1).split('/');currentView=id||'overview';const m=MODULES.find(x=>x.id===currentView);$('#view').setAttribute('role',m?'tabpanel':'region');$('#view').removeAttribute('aria-labelledby');if(m){$('#view').setAttribute('aria-labelledby','tab-'+m.id);renderModule(m,m.lessons.some(l=>l.id===lesson)?lesson:null);}else if(currentView==='modules')renderModules();else if(currentView==='bookmarks')renderBookmarks();else if(currentView==='portfolio')renderProject();else{currentView='overview';renderOverview();}renderNav();renderStorage();if(!lesson)window.scrollTo({top:0,behavior:'instant'});}
+function renderRoute(){const [id,lesson]=location.hash.slice(1).split('/');currentView=id||'overview';const m=MODULES.find(x=>x.id===currentView);$('#view').setAttribute('role',m?'tabpanel':'region');$('#view').removeAttribute('aria-labelledby');if(m){$('#view').setAttribute('aria-labelledby','tab-'+m.id);renderModule(m,m.lessons.some(l=>l.id===lesson)?lesson:null);}else if(currentView==='modules')renderModules();else if(currentView==='bookmarks')renderBookmarks();else if(currentView==='portfolio')renderProject();else if(currentView==='resume')renderResume();else{currentView='overview';renderOverview();}renderNav();renderStorage();if(!lesson)window.scrollTo({top:0,behavior:'instant'});}
 function updateProgress(id,checked){
   if(!validIds.has(id))return;
   state.done=checked?[...new Set([...state.done,id])]:state.done.filter(x=>x!==id);rememberChapter(id,true);persist();renderNav();
