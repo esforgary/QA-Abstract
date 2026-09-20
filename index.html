@@ -107,8 +107,8 @@ dialog{background:#20252e;border-color:#4a5972;box-shadow:0 20px 100px #0008,0 0
 .side-hours{margin-top:21px;padding-top:18px;border-top:1px solid var(--line)}
 #side-hours-percent{color:#65b7ff}
 #side-hours-bar{background:#65b7ff;box-shadow:0 0 10px #65b7ff55}
-.side-hours .side-foot{flex-wrap:wrap;gap:5px 12px;line-height:1.5}
-#side-hours-left{font-size:11px}
+.side-bottom .side-foot{flex-wrap:wrap;gap:5px 8px;line-height:1.5}
+#side-left,#side-hours-left{font-size:11px}
 /* Keep wide examples inside their own scrollers instead of expanding the chapter grid. */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .lessons{grid-template-columns:minmax(0,1fr)}
@@ -136,7 +136,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="nav-label">РАЗДЕЛЫ КОНСПЕКТА</div>
 <nav class="topic-nav" id="topic-nav" aria-label="Разделы конспекта" role="tablist" aria-orientation="vertical"></nav>
 <div class="side-bottom">
-<div class="card-top"><span class="small">Изучение конспекта</span><span id="side-percent" class="small" style="color:var(--lime)">0%</span></div><div class="bar" style="margin-top:11px"><span id="side-bar"></span></div><div class="side-foot"><span id="side-done">Начало пути</span><button data-action="settings" aria-label="Настройки прогресса">Настройки ↗</button></div>
+<div class="card-top"><span class="small">Изучение конспекта</span><span id="side-percent" class="small" style="color:var(--lime)">0%</span></div><div class="bar" style="margin-top:11px"><span id="side-bar"></span></div><div class="side-foot"><span id="side-done">Начало пути</span><span id="side-left"></span></div>
 <div class="side-hours" aria-label="Прогресс по учебным часам"><div class="card-top"><span class="small">Учебные часы</span><span id="side-hours-percent" class="small">0%</span></div><div class="bar" style="margin-top:11px" role="progressbar" aria-label="Учебные часы" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="side-hours-progress"><span id="side-hours-bar"></span></div><div class="side-foot"><span id="side-hours-done"></span><span id="side-hours-left"></span></div></div>
 </div>
 </aside>
@@ -9435,6 +9435,8 @@ function renderNav(){
   $('#main-nav').innerHTML=[['overview','home','Конспект'],['bookmarks','bookmark','Закладки'],['portfolio','rocket','Pet-проект']].map(([id,i,t])=>`<button class="nav-item ${currentView===id?'active':''}" data-view="${id}" ${currentView===id?'aria-current="page"':''}>${icon(i)}${t}${id==='bookmarks'?`<span class="nav-count">${state.saved.length||''}</span>`:''}</button>`).join('');
   $('#topic-nav').innerHTML=MODULES.map((m,i)=>`<button id="tab-${m.id}" role="tab" aria-selected="${currentView===m.id}" tabindex="${currentView===m.id||(!MODULES.some(x=>x.id===currentView)&&i===0)?0:-1}" aria-controls="view" class="nav-item ${currentView===m.id?'active':''}" data-view="${m.id}">${icon(m.icon)}<span>${esc(m.title)}</span>${count(m)===m.lessons.length?'<span class="nav-count" style="color:var(--lime)">✓</span>':''}</button>`).join('');
   $('#side-percent').textContent=percent()+'%';$('#side-bar').style.width=percent()+'%';$('#side-done').textContent=`${state.done.length} из ${ALL.length} глав`;
+  const chaptersLeft=ALL.length-state.done.length;
+  $('#side-left').textContent=`${chapterWord(chaptersLeft)==='глава'?'Осталась':'Осталось'} ${chaptersLeft} ${chapterWord(chaptersLeft)}`;
   const time=studyTime(),hourPercent=time.total?Math.round(time.done/time.total*100):0;
   $('#side-hours-percent').textContent=hourPercent+'%';$('#side-hours-bar').style.width=hourPercent+'%';
   $('#side-hours-done').textContent=`${hours(time.done)} из ${hours(time.total)} ч`;
