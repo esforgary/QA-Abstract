@@ -266,11 +266,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "qa-quality",
-        "title": "QA, QC и тестирование",
-        "minutes": 5,
-        "summary": "Работа QA — предупреждать дефекты и оценивать качество продукта.",
+        "id": "foundations-chapter-quality",
+        "title": "Работа QA и принципы тестирования",
+        "minutes": 12,
+        "summary": "Тестирование даёт сведения о качестве продукта и помогает обнаруживать дефекты на разных этапах работы.",
+        "category": "Основы качества",
+        "topics": [
+          {
+            "id": "qa-quality",
+            "title": "QA, QC и тестирование",
+            "minutes": 5
+          },
+          {
+            "id": "qa-principles",
+            "title": "Принципы и статическое тестирование",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "QA, QC и тестирование"
+          },
           {
             "type": "list",
             "items": [
@@ -295,25 +312,15 @@ const MODULES = [
               "Defect — дефект реализации: amount \u003e 100 вместо amount \u003e= 100.",
               "Failure — проявление дефекта: скидка не применилась при сумме 100 ₽."
             ]
-          }
-        ],
-        "resources": [
-          {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Основы качества"
-      },
-      {
-        "id": "qa-principles",
-        "title": "Принципы и статическое тестирование",
-        "minutes": 7,
-        "summary": "Успешный прогон даёт сведения о проверенных условиях, но не доказывает отсутствие всех ошибок.",
-        "blocks": [
+          },
           {
             "type": "heading",
-            "text": "Семь принципов"
+            "text": "Принципы и статическое тестирование"
+          },
+          {
+            "type": "heading",
+            "text": "Семь принципов",
+            "level": 4
           },
           {
             "type": "list",
@@ -329,7 +336,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "До и после запуска"
+            "text": "До и после запуска",
+            "level": 4
           },
           {
             "type": "list",
@@ -348,15 +356,36 @@ const MODULES = [
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
           }
-        ],
-        "category": "Основы качества"
+        ]
       },
       {
-        "id": "qa-lifecycle",
-        "title": "SDLC и STLC",
-        "minutes": 7,
-        "summary": "SDLC описывает жизнь продукта, STLC — деятельность по его тестированию.",
+        "id": "foundations-chapter-process",
+        "title": "Разработка, работа команды и требования",
+        "minutes": 24,
+        "summary": "Организация разработки определяет, как требования превращаются в проверенный результат.",
+        "category": "Процесс и требования",
+        "topics": [
+          {
+            "id": "qa-lifecycle",
+            "title": "SDLC и STLC",
+            "minutes": 7
+          },
+          {
+            "id": "qa-agile",
+            "title": "Agile, Scrum и Kanban",
+            "minutes": 10
+          },
+          {
+            "id": "qa-requirements",
+            "title": "Требования и критерии приёмки",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "SDLC и STLC"
+          },
           {
             "type": "list",
             "items": [
@@ -381,22 +410,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Пример: для новой регистрации QA уточняет правила пароля, готовит проверки, тестирует сборку на стенде и передаёт команде результаты перед релизом."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Процесс и требования"
-      },
-      {
-        "id": "qa-agile",
-        "title": "Agile, Scrum и Kanban",
-        "minutes": 10,
-        "summary": "Agile — подход к разработке; Scrum и Kanban помогают организовать работу команды.",
-        "blocks": [
+            "type": "heading",
+            "text": "Agile, Scrum и Kanban"
+          },
           {
             "type": "list",
             "items": [
@@ -407,7 +425,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Scrum: кто и что делает"
+            "text": "Scrum: кто и что делает",
+            "level": 4
           },
           {
             "type": "list",
@@ -429,22 +448,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Definition of Done — общие критерии готовности результата: например, код проверен и обязательные тесты пройдены. QA помогает выполнить их внутри спринта."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Scrum Guide: роли, события и критерии готовности",
-            "url": "https://scrumguides.org/scrum-guide.html"
-          }
-        ],
-        "category": "Процесс и требования"
-      },
-      {
-        "id": "qa-requirements",
-        "title": "Требования и критерии приёмки",
-        "minutes": 7,
-        "summary": "Проверяемое требование объясняет, при каких условиях какой результат считается правильным.",
-        "blocks": [
+            "type": "heading",
+            "text": "Требования и критерии приёмки"
+          },
           {
             "type": "list",
             "items": [
@@ -475,19 +483,45 @@ const MODULES = [
           {
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
+          },
+          {
+            "title": "Scrum Guide: роли, события и критерии готовности",
+            "url": "https://scrumguides.org/scrum-guide.html"
           }
-        ],
-        "category": "Процесс и требования"
+        ]
       },
       {
-        "id": "qa-levels",
-        "title": "Уровни, виды и «ящики» тестирования",
-        "minutes": 10,
-        "summary": "Уровень определяет масштаб проверки, вид — её цель, «ящик» — доступ к внутреннему устройству.",
+        "id": "foundations-chapter-testing",
+        "title": "Виды тестирования и организация проверок",
+        "minutes": 24,
+        "summary": "Цель проверки определяет её объём, способ выполнения и необходимые тестовые данные.",
+        "category": "Виды и организация проверок",
+        "topics": [
+          {
+            "id": "qa-levels",
+            "title": "Уровни, виды и «ящики» тестирования",
+            "minutes": 10
+          },
+          {
+            "id": "qa-check-types",
+            "title": "Smoke, sanity, retest и regression",
+            "minutes": 7
+          },
+          {
+            "id": "qa-exploration-data",
+            "title": "Исследовательское тестирование и данные",
+            "minutes": 7
+          }
+        ],
         "blocks": [
           {
             "type": "heading",
-            "text": "Уровни"
+            "text": "Уровни, виды и «ящики» тестирования"
+          },
+          {
+            "type": "heading",
+            "text": "Уровни",
+            "level": 4
           },
           {
             "type": "list",
@@ -500,7 +534,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Основные виды"
+            "text": "Основные виды",
+            "level": 4
           },
           {
             "type": "list",
@@ -514,7 +549,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Доступ к реализации"
+            "text": "Доступ к реализации",
+            "level": 4
           },
           {
             "type": "list",
@@ -523,22 +559,11 @@ const MODULES = [
               "Белый ящик — проверки на основе внутренней структуры кода.",
               "Серый ящик — частичное знание реализации: например, известна схема БД."
             ]
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Виды и организация проверок"
-      },
-      {
-        "id": "qa-check-types",
-        "title": "Smoke, sanity, retest и regression",
-        "minutes": 7,
-        "summary": "Эти проверки отличаются целью и объёмом, а не инструментом выполнения.",
-        "blocks": [
+            "type": "heading",
+            "text": "Smoke, sanity, retest и regression"
+          },
           {
             "type": "list",
             "items": [
@@ -554,7 +579,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "По входным данным"
+            "text": "По входным данным",
+            "level": 4
           },
           {
             "type": "list",
@@ -562,22 +588,11 @@ const MODULES = [
               "Позитивная проверка использует допустимые данные: зарегистрированный email и правильный пароль.",
               "Негативная проверка использует недопустимые данные или действия: пустой пароль. Ожидается контролируемый отказ без нежелательных изменений."
             ]
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Виды и организация проверок"
-      },
-      {
-        "id": "qa-exploration-data",
-        "title": "Исследовательское тестирование и данные",
-        "minutes": 7,
-        "summary": "При исследовательском тестировании изучение продукта, создание проверок и их выполнение происходят вместе.",
-        "blocks": [
+            "type": "heading",
+            "text": "Исследовательское тестирование и данные"
+          },
           {
             "type": "p",
             "text": "Исследование имеет цель и ограничение по времени. Наблюдения определяют следующую проверку: странная реакция формы становится поводом исследовать похожие условия."
@@ -589,7 +604,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Тестовые данные"
+            "text": "Тестовые данные",
+            "level": 4
           },
           {
             "type": "list",
@@ -611,15 +627,41 @@ const MODULES = [
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
           }
-        ],
-        "category": "Виды и организация проверок"
+        ]
       },
       {
-        "id": "qa-boundaries",
-        "title": "Классы эквивалентности и границы",
-        "minutes": 7,
-        "summary": "Эти техники сокращают число проверок без перебора всех возможных значений.",
+        "id": "foundations-chapter-test-design",
+        "title": "Основные техники тест-дизайна",
+        "minutes": 28,
+        "summary": "Техники тест-дизайна помогают выбрать небольшой набор проверок для существенных условий и переходов.",
+        "category": "Тест-дизайн",
+        "topics": [
+          {
+            "id": "qa-boundaries",
+            "title": "Классы эквивалентности и границы",
+            "minutes": 7
+          },
+          {
+            "id": "qa-decision-tables",
+            "title": "Таблицы решений",
+            "minutes": 7
+          },
+          {
+            "id": "qa-state-transitions",
+            "title": "Состояния и переходы",
+            "minutes": 7
+          },
+          {
+            "id": "qa-pairwise",
+            "title": "Pairwise: попарные сочетания",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Классы эквивалентности и границы"
+          },
           {
             "type": "p",
             "text": "Класс эквивалентности — группа значений, которые система должна обрабатывать одинаково. Из каждого класса берётся представитель. Это предположение о поведении, поэтому ошибка внутри класса всё ещё возможна."
@@ -644,22 +686,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Пустое поле и строка «abc» проверяются отдельно: это другие виды некорректного ввода. Для дробных величин шаг около границы определяется точностью поля, например 0,01 для цены."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Тест-дизайн"
-      },
-      {
-        "id": "qa-decision-tables",
-        "title": "Таблицы решений",
-        "minutes": 7,
-        "summary": "Таблица решений нужна, когда результат зависит от нескольких условий одновременно.",
-        "blocks": [
+            "type": "heading",
+            "text": "Таблицы решений"
+          },
           {
             "type": "p",
             "text": "Каждая строка ниже — отдельное сочетание условий и ожидаемый результат. Два независимых логических условия дают четыре сочетания; добавление третьего увеличит их число до восьми."
@@ -709,22 +740,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Пример первой строки: действующий промокод и корзина на 100 ₽ дают итог 90 ₽. Проверки 99 ₽ и 101 ₽ дополняют таблицу анализом границы."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Тест-дизайн"
-      },
-      {
-        "id": "qa-state-transitions",
-        "title": "Состояния и переходы",
-        "minutes": 7,
-        "summary": "Результат действия часто зависит от текущего состояния объекта и предыдущих действий.",
-        "blocks": [
+            "type": "heading",
+            "text": "Состояния и переходы"
+          },
           {
             "type": "p",
             "text": "Тестирование переходов проверяет разрешённые изменения состояния и запрет недопустимых. Для заказа состояние «Оплачен» означает, что событие оплаты уже успешно обработано."
@@ -750,22 +770,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Покрытие состояний означает посещение каждого состояния. Покрытие переходов требует выполнения каждой разрешённой стрелки. Одного успешного полного пути недостаточно для проверки отмены и запрещённых действий."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Тест-дизайн"
-      },
-      {
-        "id": "qa-pairwise",
-        "title": "Pairwise: попарные сочетания",
-        "minutes": 7,
-        "summary": "Pairwise подбирает набор проверок, в котором встречается каждая пара значений разных параметров.",
-        "blocks": [
+            "type": "heading",
+            "text": "Pairwise: попарные сочетания"
+          },
           {
             "type": "p",
             "text": "Полный перебор двух браузеров, двух языков и двух тем даёт восемь сочетаний. Для попарного покрытия достаточно следующих четырёх:"
@@ -822,15 +831,31 @@ const MODULES = [
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
           }
-        ],
-        "category": "Тест-дизайн"
+        ]
       },
       {
-        "id": "qa-risks-metrics",
-        "title": "Риски, покрытие и метрики",
-        "minutes": 7,
-        "summary": "При ограниченном времени первыми проверяются области с наиболее опасными и вероятными сбоями.",
+        "id": "foundations-chapter-risks-diagnostics",
+        "title": "Оценка рисков и диагностика дефектов",
+        "minutes": 14,
+        "summary": "Риски задают приоритет проверок, а результаты и доказательства объясняют обнаруженные проблемы.",
+        "category": "Риски и диагностика",
+        "topics": [
+          {
+            "id": "qa-risks-metrics",
+            "title": "Риски, покрытие и метрики",
+            "minutes": 7
+          },
+          {
+            "id": "qa-defect-investigation",
+            "title": "Диагностика дефекта",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Риски, покрытие и метрики"
+          },
           {
             "type": "list",
             "items": [
@@ -851,22 +876,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Доля успешных среди выполненных: 15 / 17 ≈ 88%. Это не «качество продукта 88%». Отчёт дополнительно показывает критичные дефекты и непроверенные риски."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Риски и диагностика"
-      },
-      {
-        "id": "qa-defect-investigation",
-        "title": "Диагностика дефекта",
-        "minutes": 7,
-        "summary": "Диагностика связывает наблюдаемую ошибку с конкретным запросом и условиями воспроизведения.",
-        "blocks": [
+            "type": "heading",
+            "text": "Диагностика дефекта"
+          },
           {
             "type": "code",
             "language": "text",
@@ -907,8 +921,7 @@ const MODULES = [
             "title": "Chrome DevTools: Network",
             "url": "https://developer.chrome.com/docs/devtools/network/"
           }
-        ],
-        "category": "Риски и диагностика"
+        ]
       }
     ]
   },
@@ -929,11 +942,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "docs-map-plan",
-        "title": "Документы QA и тест-план",
-        "minutes": 7,
-        "summary": "Документация сохраняет договорённости о проверках и помогает команде повторить результат.",
+        "id": "documentation-chapter-planning",
+        "title": "Тест-план и связь проверок с требованиями",
+        "minutes": 12,
+        "summary": "Документы связывают запланированную работу с требованиями и результатами конкретных проверок.",
+        "category": "Планирование и покрытие",
+        "topics": [
+          {
+            "id": "docs-map-plan",
+            "title": "Документы QA и тест-план",
+            "minutes": 7
+          },
+          {
+            "id": "docs-traceability",
+            "title": "Связь требований, проверок и багов",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Документы QA и тест-план"
+          },
           {
             "type": "list",
             "items": [
@@ -945,7 +975,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Короткий тест-план"
+            "text": "Короткий тест-план",
+            "level": 4
           },
           {
             "type": "code",
@@ -959,22 +990,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "План отвечает, что и в каких условиях проверяется. Он не заменяет результаты: статус каждой проверки появляется только после выполнения."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "ISTQB: программа Foundation Level и словарь",
-            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
-          }
-        ],
-        "category": "Планирование и покрытие"
-      },
-      {
-        "id": "docs-traceability",
-        "title": "Связь требований, проверок и багов",
-        "minutes": 5,
-        "summary": "Прослеживаемость (traceability) показывает, какой проверкой покрыто требование и что обнаружено при выполнении.",
-        "blocks": [
+            "type": "heading",
+            "text": "Связь требований, проверок и багов"
+          },
           {
             "type": "code",
             "language": "text",
@@ -1000,6 +1020,10 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "ISTQB: программа Foundation Level и словарь",
+            "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
+          },
+          {
             "title": "TestRail: кейсы, наборы и прогоны",
             "url": "https://support.testrail.com/hc/en-us/articles/7076810203028-Introduction-to-TestRail"
           },
@@ -1007,15 +1031,31 @@ const MODULES = [
             "title": "TestRail: интеграция требований и дефектов",
             "url": "https://support.testrail.com/hc/en-us/articles/7747333895700-Introduction-to-reference-and-defect-integrations"
           }
-        ],
-        "category": "Планирование и покрытие"
+        ]
       },
       {
-        "id": "docs-cases",
-        "title": "Тест-кейс",
-        "minutes": 7,
-        "summary": "Тест-кейс — воспроизводимая проверка с исходными условиями, действиями и ожидаемым результатом.",
+        "id": "documentation-chapter-test-descriptions",
+        "title": "Тест-кейсы и чек-листы",
+        "minutes": 12,
+        "summary": "Подробность описания проверки зависит от сложности сценария и необходимой воспроизводимости.",
+        "category": "Описание проверок",
+        "topics": [
+          {
+            "id": "docs-cases",
+            "title": "Тест-кейс",
+            "minutes": 7
+          },
+          {
+            "id": "docs-checklists",
+            "title": "Чек-лист и исследовательская сессия",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Тест-кейс"
+          },
           {
             "type": "list",
             "items": [
@@ -1038,25 +1078,15 @@ const MODULES = [
           {
             "type": "p",
             "text": "Тестовый сценарий — общий путь, например «вход → покупка». Кейс раскрывает конкретную проверку этого пути. Формулировка «всё работает» не задаёт ожидаемый результат. Шаги вроде «ввести правильные данные» заменяются конкретным набором или ссылкой на него."
-          }
-        ],
-        "resources": [
-          {
-            "title": "TestRail: кейсы, наборы и прогоны",
-            "url": "https://support.testrail.com/hc/en-us/articles/7076810203028-Introduction-to-TestRail"
-          }
-        ],
-        "category": "Описание проверок"
-      },
-      {
-        "id": "docs-checklists",
-        "title": "Чек-лист и исследовательская сессия",
-        "minutes": 5,
-        "summary": "Чек-лист перечисляет, что проверить, без подробной инструкции каждого действия.",
-        "blocks": [
+          },
           {
             "type": "heading",
-            "text": "Пример: вход в аккаунт"
+            "text": "Чек-лист и исследовательская сессия"
+          },
+          {
+            "type": "heading",
+            "text": "Пример: вход в аккаунт",
+            "level": 4
           },
           {
             "type": "list",
@@ -1085,18 +1115,38 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "TestRail: кейсы, наборы и прогоны",
+            "url": "https://support.testrail.com/hc/en-us/articles/7076810203028-Introduction-to-TestRail"
+          },
+          {
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
           }
-        ],
-        "category": "Описание проверок"
+        ]
       },
       {
-        "id": "docs-bug-report",
-        "title": "Баг-репорт",
-        "minutes": 7,
-        "summary": "Баг-репорт должен объяснять, где возникает проблема, как её повторить и чем факт отличается от ожидания.",
+        "id": "documentation-chapter-defects",
+        "title": "Баг-репорт, severity и priority",
+        "minutes": 12,
+        "summary": "Описание дефекта фиксирует способ воспроизведения и объясняет его влияние на продукт.",
+        "category": "Описание дефектов",
+        "topics": [
+          {
+            "id": "docs-bug-report",
+            "title": "Баг-репорт",
+            "minutes": 7
+          },
+          {
+            "id": "docs-severity-priority",
+            "title": "Severity и priority",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Баг-репорт"
+          },
           {
             "type": "code",
             "language": "text",
@@ -1119,25 +1169,15 @@ const MODULES = [
           {
             "type": "p",
             "text": "Если баг нестабилен, полезны частота и условия появления. Отсутствие воспроизведения на одной попытке не отменяет сохранённые доказательства."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Atlassian: создание задачи и подзадачи",
-            "url": "https://support.atlassian.com/jira-software-cloud/docs/create-a-work-item-and-a-subtask/"
-          }
-        ],
-        "category": "Дефекты и workflow"
-      },
-      {
-        "id": "docs-severity-priority",
-        "title": "Severity и priority",
-        "minutes": 5,
-        "summary": "Severity описывает ущерб от дефекта, priority — срочность его исправления.",
-        "blocks": [
+          },
           {
             "type": "heading",
-            "text": "Типичная шкала severity"
+            "text": "Severity и priority"
+          },
+          {
+            "type": "heading",
+            "text": "Типичная шкала severity",
+            "level": 4
           },
           {
             "type": "list",
@@ -1170,15 +1210,31 @@ const MODULES = [
             "title": "Atlassian: создание задачи и подзадачи",
             "url": "https://support.atlassian.com/jira-software-cloud/docs/create-a-work-item-and-a-subtask/"
           }
-        ],
-        "category": "Дефекты и workflow"
+        ]
       },
       {
-        "id": "docs-jira-create",
-        "title": "Jira: карточка задачи",
-        "minutes": 7,
-        "summary": "Jira хранит задачи команды, их статусы, ответственных и связи с разработкой.",
+        "id": "documentation-chapter-jira",
+        "title": "Jira: задача от создания до закрытия",
+        "minutes": 14,
+        "summary": "Карточка Jira хранит контекст задачи и результат каждого этапа её выполнения.",
+        "category": "Работа в Jira",
+        "topics": [
+          {
+            "id": "docs-jira-create",
+            "title": "Jira: карточка задачи",
+            "minutes": 7
+          },
+          {
+            "id": "docs-jira-workflow",
+            "title": "Jira: workflow и проверка исправления",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Jira: карточка задачи"
+          },
           {
             "type": "list",
             "items": [
@@ -1190,7 +1246,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Основные поля"
+            "text": "Основные поля",
+            "level": 4
           },
           {
             "type": "list",
@@ -1213,26 +1270,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Конкретные поля и типы зависят от настроек проекта. Severity часто является отдельным пользовательским полем; она не заменяет Priority."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Atlassian: создание задачи и подзадачи",
-            "url": "https://support.atlassian.com/jira-software-cloud/docs/create-a-work-item-and-a-subtask/"
           },
           {
-            "title": "Atlassian: связи задач",
-            "url": "https://support.atlassian.com/jira-software-cloud/docs/link-issues/"
-          }
-        ],
-        "category": "Дефекты и workflow"
-      },
-      {
-        "id": "docs-jira-workflow",
-        "title": "Jira: workflow и проверка исправления",
-        "minutes": 7,
-        "summary": "Workflow — набор статусов задачи и разрешённых переходов между ними.",
-        "blocks": [
+            "type": "heading",
+            "text": "Jira: workflow и проверка исправления"
+          },
           {
             "type": "code",
             "language": "text",
@@ -1260,18 +1302,42 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Atlassian: создание задачи и подзадачи",
+            "url": "https://support.atlassian.com/jira-software-cloud/docs/create-a-work-item-and-a-subtask/"
+          },
+          {
+            "title": "Atlassian: связи задач",
+            "url": "https://support.atlassian.com/jira-software-cloud/docs/link-issues/"
+          },
+          {
             "title": "Atlassian: как устроены workflow",
             "url": "https://support.atlassian.com/jira-cloud-administration/docs/work-with-issue-workflows/"
           }
-        ],
-        "category": "Дефекты и workflow"
+        ]
       },
       {
-        "id": "docs-jql",
-        "title": "JQL: поиск задач",
-        "minutes": 10,
-        "summary": "JQL (Jira Query Language) фильтрует задачи по полям. Он не изменяет их данные.",
+        "id": "documentation-chapter-results",
+        "title": "Поиск задач и тестовый отчёт",
+        "minutes": 15,
+        "summary": "Поиск нужных задач и итоговый отчёт помогают оценить состояние проверок перед выпуском.",
+        "category": "Поиск и отчётность",
+        "topics": [
+          {
+            "id": "docs-jql",
+            "title": "JQL: поиск задач",
+            "minutes": 10
+          },
+          {
+            "id": "docs-report",
+            "title": "Тестовый отчёт",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "JQL: поиск задач"
+          },
           {
             "type": "list",
             "items": [
@@ -1287,7 +1353,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Незавершённые баги текущего пользователя"
+            "text": "Незавершённые баги текущего пользователя",
+            "level": 4
           },
           {
             "type": "code",
@@ -1296,7 +1363,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Баги за неделю, ожидающие QA"
+            "text": "Баги за неделю, ожидающие QA",
+            "level": 4
           },
           {
             "type": "code",
@@ -1306,26 +1374,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "SHOP и названия статусов заменяются значениями проекта. `assignee != currentUser()` не включает неназначенные задачи; для них нужно `OR assignee IS EMPTY` в скобках. Полезный запрос сохраняется как фильтр."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Atlassian: операторы JQL",
-            "url": "https://support.atlassian.com/jira-software-cloud/docs/jql-operators/"
           },
           {
-            "title": "Atlassian: функции JQL",
-            "url": "https://support.atlassian.com/jira-software-cloud/docs/jql-functions/"
-          }
-        ],
-        "category": "Поиск и отчётность"
-      },
-      {
-        "id": "docs-report",
-        "title": "Тестовый отчёт",
-        "minutes": 5,
-        "summary": "Отчёт перед выпуском показывает выполненную работу, найденные проблемы и оставшиеся риски.",
-        "blocks": [
+            "type": "heading",
+            "text": "Тестовый отчёт"
+          },
           {
             "type": "list",
             "items": [
@@ -1352,6 +1405,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Atlassian: операторы JQL",
+            "url": "https://support.atlassian.com/jira-software-cloud/docs/jql-operators/"
+          },
+          {
+            "title": "Atlassian: функции JQL",
+            "url": "https://support.atlassian.com/jira-software-cloud/docs/jql-functions/"
+          },
+          {
             "title": "ISTQB: программа Foundation Level и словарь",
             "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"
           },
@@ -1359,8 +1420,7 @@ const MODULES = [
             "title": "TestRail: test runs и результаты",
             "url": "https://support.testrail.com/hc/en-us/articles/32784099933844-Best-Practices-Guide-Test-Runs-and-Results"
           }
-        ],
-        "category": "Поиск и отчётность"
+        ]
       }
     ]
   },
@@ -1382,11 +1442,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "web-architecture",
-        "title": "Клиент, сервер и URL",
-        "minutes": 8,
-        "summary": "Путь запроса от браузера до данных и части веб-адреса.",
+        "id": "web-chapter-http",
+        "title": "Устройство веба и HTTP",
+        "minutes": 20,
+        "summary": "Браузер обращается к серверу по URL и получает результат в HTTP-ответе.",
+        "category": "Устройство веба",
+        "topics": [
+          {
+            "id": "web-architecture",
+            "title": "Клиент, сервер и URL",
+            "minutes": 8
+          },
+          {
+            "id": "web-http",
+            "title": "HTTP: методы, статусы и заголовки",
+            "minutes": 12
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Клиент, сервер и URL"
+          },
           {
             "type": "p",
             "text": "Веб-приложение обычно разделено на клиентскую и серверную части. Ошибка на экране может возникнуть на любом участке обмена."
@@ -1419,26 +1496,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Если API вернул правильную цену, а экран показывает другую, есть факт расхождения при отображении. Вывод «сломалась база» без проверки данных преждевременен."
-          }
-        ],
-        "resources": [
-          {
-            "title": "MDN: URL",
-            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL"
           },
           {
-            "title": "MDN: HTTP",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
-          }
-        ],
-        "category": "Устройство веба"
-      },
-      {
-        "id": "web-http",
-        "title": "HTTP: методы, статусы и заголовки",
-        "minutes": 12,
-        "summary": "Как читать запрос и ответ; обязательный минимум HTTP.",
-        "blocks": [
+            "type": "heading",
+            "text": "HTTP: методы, статусы и заголовки"
+          },
           {
             "type": "p",
             "text": "HTTP — правила обмена запросами и ответами. Части сообщения показаны ниже."
@@ -1563,6 +1625,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "MDN: URL",
+            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL"
+          },
+          {
+            "title": "MDN: HTTP",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+          },
+          {
             "title": "MDN: методы HTTP",
             "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
           },
@@ -1570,15 +1640,31 @@ const MODULES = [
             "title": "MDN: статусы",
             "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"
           }
-        ],
-        "category": "Устройство веба"
+        ]
       },
       {
-        "id": "web-dom",
-        "title": "HTML, DOM и формы",
-        "minutes": 7,
-        "summary": "Основные элементы страницы и ограничения полей.",
+        "id": "web-chapter-page",
+        "title": "Структура страницы и поиск элементов",
+        "minutes": 15,
+        "summary": "Знание структуры HTML помогает находить элементы и проверять поведение формы.",
+        "category": "Страница и локаторы",
+        "topics": [
+          {
+            "id": "web-dom",
+            "title": "HTML, DOM и формы",
+            "minutes": 7
+          },
+          {
+            "id": "web-locators",
+            "title": "CSS-селекторы и XPath",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "HTML, DOM и формы"
+          },
           {
             "type": "list",
             "items": [
@@ -1613,26 +1699,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Ограничения HTML можно обойти прямым API-запросом. Поэтому сервер обязан самостоятельно проверять данные; исправная форма не доказывает исправность backend."
-          }
-        ],
-        "resources": [
-          {
-            "title": "MDN: HTML forms",
-            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms"
           },
           {
-            "title": "MDN: DOM",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
-          }
-        ],
-        "category": "Страница и локаторы"
-      },
-      {
-        "id": "web-locators",
-        "title": "CSS-селекторы и XPath",
-        "minutes": 8,
-        "summary": "Как найти нужный элемент без привязки к случайной позиции.",
-        "blocks": [
+            "type": "heading",
+            "text": "CSS-селекторы и XPath"
+          },
           {
             "type": "p",
             "text": "Локатор описывает, какой элемент нужен для проверки. Устойчивый локатор опирается на назначение элемента или стабильный атрибут, а не на длинную цепочку вложенных div."
@@ -1674,6 +1745,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "MDN: HTML forms",
+            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms"
+          },
+          {
+            "title": "MDN: DOM",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
             "title": "MDN: CSS selectors",
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"
           },
@@ -1681,15 +1760,36 @@ const MODULES = [
             "title": "MDN: XPath",
             "url": "https://developer.mozilla.org/en-US/docs/Web/XML/XPath"
           }
-        ],
-        "category": "Страница и локаторы"
+        ]
       },
       {
-        "id": "web-elements-console",
-        "title": "DevTools: Elements и Console",
-        "minutes": 7,
-        "summary": "Проверка элемента, стилей и ошибок JavaScript.",
+        "id": "web-chapter-devtools",
+        "title": "Диагностика сайта в DevTools",
+        "minutes": 21,
+        "summary": "DevTools связывает поведение страницы с ошибками кода и обменом данными по сети.",
+        "category": "Диагностика в DevTools",
+        "topics": [
+          {
+            "id": "web-elements-console",
+            "title": "DevTools: Elements и Console",
+            "minutes": 7
+          },
+          {
+            "id": "web-network",
+            "title": "DevTools: Network",
+            "minutes": 8
+          },
+          {
+            "id": "web-performance",
+            "title": "Медленная загрузка и подвисания",
+            "minutes": 6
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "DevTools: Elements и Console"
+          },
           {
             "type": "p",
             "text": "DevTools открываются через F12 или «Проверить» в контекстном меню страницы. Elements помогает исследовать интерфейс, Console — увидеть сообщения JavaScript."
@@ -1710,7 +1810,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Если кнопка не нажимается"
+            "text": "Если кнопка не нажимается",
+            "level": 4
           },
           {
             "type": "list",
@@ -1724,26 +1825,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Изменение DOM или CSS в DevTools действует локально и обычно исчезает после перезагрузки. Оно помогает проверить гипотезу, но не исправляет приложение."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Chrome: Elements",
-            "url": "https://developer.chrome.com/docs/devtools/elements"
           },
           {
-            "title": "Chrome: Console",
-            "url": "https://developer.chrome.com/docs/devtools/console"
-          }
-        ],
-        "category": "Диагностика в DevTools"
-      },
-      {
-        "id": "web-network",
-        "title": "DevTools: Network",
-        "minutes": 8,
-        "summary": "Где увидеть отправленные данные, ответ сервера и время запроса.",
-        "blocks": [
+            "type": "heading",
+            "text": "DevTools: Network"
+          },
           {
             "type": "p",
             "text": "Network записывает сетевые запросы после открытия DevTools. Для ошибки покупки важен запрос, вызванный нажатием кнопки, а не любой красный запрос на странице."
@@ -1794,22 +1880,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Такая запись позволяет разработчику найти серверный лог по request ID. Copy as cURL помогает повторить запрос отдельно от интерфейса; перед передачей команды удаляются реальные токены и cookies. Если запрос отсутствует, проверка продолжается в интерфейсе и Console."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Chrome: Network",
-            "url": "https://developer.chrome.com/docs/devtools/network/"
-          }
-        ],
-        "category": "Диагностика в DevTools"
-      },
-      {
-        "id": "web-performance",
-        "title": "Медленная загрузка и подвисания",
-        "minutes": 6,
-        "summary": "Как отличить задержку сети от работы интерфейса.",
-        "blocks": [
+            "type": "heading",
+            "text": "Медленная загрузка и подвисания"
+          },
           {
             "type": "p",
             "text": "Быстрый ответ API не гарантирует быстрый экран. После получения данных браузер ещё выполняет JavaScript и рисует страницу."
@@ -1825,7 +1900,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Воспроизводимый замер"
+            "text": "Воспроизводимый замер",
+            "level": 4
           },
           {
             "type": "list",
@@ -1843,6 +1919,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Chrome: Elements",
+            "url": "https://developer.chrome.com/docs/devtools/elements"
+          },
+          {
+            "title": "Chrome: Console",
+            "url": "https://developer.chrome.com/docs/devtools/console"
+          },
+          {
+            "title": "Chrome: Network",
+            "url": "https://developer.chrome.com/docs/devtools/network/"
+          },
+          {
             "title": "Chrome: Performance",
             "url": "https://developer.chrome.com/docs/devtools/performance"
           },
@@ -1850,15 +1938,31 @@ const MODULES = [
             "title": "web.dev: Web Vitals",
             "url": "https://web.dev/articles/vitals"
           }
-        ],
-        "category": "Диагностика в DevTools"
+        ]
       },
       {
-        "id": "web-auth",
-        "title": "Cookies, сессии и токены",
-        "minutes": 8,
-        "summary": "Как сохраняется вход и где проверяются права.",
+        "id": "web-chapter-browser-state",
+        "title": "Авторизация и данные в браузере",
+        "minutes": 16,
+        "summary": "Состояние браузера и правила доступа влияют на сохранение входа и выполнение запросов.",
+        "category": "Состояние и доступ",
+        "topics": [
+          {
+            "id": "web-auth",
+            "title": "Cookies, сессии и токены",
+            "minutes": 8
+          },
+          {
+            "id": "web-storage-cors",
+            "title": "Application: хранилища, кэш и CORS",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Cookies, сессии и токены"
+          },
           {
             "type": "list",
             "items": [
@@ -1885,7 +1989,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Главные проверки"
+            "text": "Главные проверки",
+            "level": 4
           },
           {
             "type": "list",
@@ -1895,26 +2000,11 @@ const MODULES = [
               "Доступ пользователя A к данным пользователя B.",
               "Проверка прав прямым API-запросом: скрытая кнопка не является защитой."
             ]
-          }
-        ],
-        "resources": [
-          {
-            "title": "MDN: cookies",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies"
           },
           {
-            "title": "RFC 7519: JWT",
-            "url": "https://www.rfc-editor.org/rfc/rfc7519"
-          }
-        ],
-        "category": "Состояние и доступ"
-      },
-      {
-        "id": "web-storage-cors",
-        "title": "Application: хранилища, кэш и CORS",
-        "minutes": 8,
-        "summary": "Что остаётся в браузере и почему запрос работает только вне него.",
-        "blocks": [
+            "type": "heading",
+            "text": "Application: хранилища, кэш и CORS"
+          },
           {
             "type": "p",
             "text": "Application в DevTools показывает данные, сохранённые сайтом. Они могут объяснить старые настройки или поведение после повторного открытия."
@@ -1950,6 +2040,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "MDN: cookies",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies"
+          },
+          {
+            "title": "RFC 7519: JWT",
+            "url": "https://www.rfc-editor.org/rfc/rfc7519"
+          },
+          {
             "title": "MDN: CORS",
             "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
           },
@@ -1961,14 +2059,21 @@ const MODULES = [
             "title": "MDN: Web Storage",
             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
           }
-        ],
-        "category": "Состояние и доступ"
+        ]
       },
       {
-        "id": "web-adaptive",
-        "title": "Адаптивность и доступность",
+        "id": "web-chapter-interface-quality",
+        "title": "Адаптивность и доступность интерфейса",
         "minutes": 6,
-        "summary": "Основные проверки экрана, клавиатуры и разных браузеров.",
+        "summary": "Проверка интерфейса учитывает размер экрана и разные способы взаимодействия с сайтом.",
+        "category": "Качество интерфейса",
+        "topics": [
+          {
+            "id": "web-adaptive",
+            "title": "Адаптивность и доступность",
+            "minutes": 6
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -2016,8 +2121,7 @@ const MODULES = [
             "title": "W3C: WCAG 2.2",
             "url": "https://www.w3.org/TR/WCAG22/"
           }
-        ],
-        "category": "Качество интерфейса"
+        ]
       }
     ]
   },
@@ -2039,11 +2143,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "api-basics",
-        "title": "API, REST и JSON",
-        "minutes": 7,
-        "summary": "Ресурс, endpoint, параметры и чтение JSON.",
+        "id": "api-chapter-contract",
+        "title": "Устройство API и его контракт",
+        "minutes": 14,
+        "summary": "Контракт API определяет допустимый запрос и ожидаемую структуру ответа.",
+        "category": "Основы и контракт",
+        "topics": [
+          {
+            "id": "api-basics",
+            "title": "API, REST и JSON",
+            "minutes": 7
+          },
+          {
+            "id": "api-openapi",
+            "title": "Swagger / OpenAPI: контракт API",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "API, REST и JSON"
+          },
           {
             "type": "list",
             "items": [
@@ -2078,26 +2199,11 @@ const MODULES = [
               "null — явно заданное пустое значение; отсутствующее поле — другое состояние.",
               "Число 7 и строка \"7\" имеют разные типы; сервер может обрабатывать их по-разному."
             ]
-          }
-        ],
-        "resources": [
-          {
-            "title": "JSON: спецификация",
-            "url": "https://www.json.org/json-en.html"
           },
           {
-            "title": "JSONPlaceholder: guide",
-            "url": "https://jsonplaceholder.typicode.com/guide/"
-          }
-        ],
-        "category": "Основы и контракт"
-      },
-      {
-        "id": "api-openapi",
-        "title": "Swagger / OpenAPI: контракт API",
-        "minutes": 7,
-        "summary": "Как получить проверки из документации операции.",
-        "blocks": [
+            "type": "heading",
+            "text": "Swagger / OpenAPI: контракт API"
+          },
           {
             "type": "p",
             "text": "Контракт описывает допустимый запрос и ожидаемый ответ. OpenAPI — формат такого описания; Swagger UI показывает его как интерактивную документацию."
@@ -2124,7 +2230,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Проверки из этого контракта"
+            "text": "Проверки из этого контракта",
+            "level": 4
           },
           {
             "type": "list",
@@ -2142,6 +2249,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "JSON: спецификация",
+            "url": "https://www.json.org/json-en.html"
+          },
+          {
+            "title": "JSONPlaceholder: guide",
+            "url": "https://jsonplaceholder.typicode.com/guide/"
+          },
+          {
             "title": "OpenAPI 3.1 specification",
             "url": "https://spec.openapis.org/oas/v3.1.1.html"
           },
@@ -2149,15 +2264,31 @@ const MODULES = [
             "title": "Swagger: describing parameters",
             "url": "https://swagger.io/docs/specification/v3_0/describing-parameters/"
           }
-        ],
-        "category": "Основы и контракт"
+        ]
       },
       {
-        "id": "api-first-request",
-        "title": "Первый запрос в Postman",
-        "minutes": 7,
-        "summary": "Где задаются метод, URL и параметры; как читается ответ.",
+        "id": "api-chapter-postman-requests",
+        "title": "Запросы и окружения в Postman",
+        "minutes": 14,
+        "summary": "Настройки запроса и переменные позволяют повторять одну проверку на разных стендах.",
+        "category": "Запросы в Postman",
+        "topics": [
+          {
+            "id": "api-first-request",
+            "title": "Первый запрос в Postman",
+            "minutes": 7
+          },
+          {
+            "id": "api-variables",
+            "title": "Переменные и окружения Postman",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Первый запрос в Postman"
+          },
           {
             "type": "p",
             "text": "Postman отправляет HTTP-запросы и показывает ответы. Collection хранит связанные запросы. Учебный публичный сервис в этом разделе — JSONPlaceholder; доступа по токену для чтения не требуется."
@@ -2180,7 +2311,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Фильтрация списка"
+            "text": "Фильтрация списка",
+            "level": 4
           },
           {
             "type": "list",
@@ -2193,26 +2325,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Тело GET-запросу здесь не требуется. Если ответ не соответствует ожиданию, первым делом сверяются фактически отправленные URL и параметры."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Postman: отправка запросов",
-            "url": "https://learning.postman.com/docs/sending-requests/create-requests/create-requests/"
           },
           {
-            "title": "JSONPlaceholder: resources",
-            "url": "https://jsonplaceholder.typicode.com/"
-          }
-        ],
-        "category": "Запросы в Postman"
-      },
-      {
-        "id": "api-variables",
-        "title": "Переменные и окружения Postman",
-        "minutes": 7,
-        "summary": "Один запрос для разных стендов и правила подстановки.",
-        "blocks": [
+            "type": "heading",
+            "text": "Переменные и окружения Postman"
+          },
           {
             "type": "p",
             "text": "Переменная заменяет повторяющееся значение. Например, {{baseUrl}}/users/{{userId}} позволяет менять сервер и пользователя без переписывания запроса."
@@ -2252,6 +2369,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Postman: отправка запросов",
+            "url": "https://learning.postman.com/docs/sending-requests/create-requests/create-requests/"
+          },
+          {
+            "title": "JSONPlaceholder: resources",
+            "url": "https://jsonplaceholder.typicode.com/"
+          },
+          {
             "title": "Postman: переменные",
             "url": "https://learning.postman.com/docs/use/send-requests/variables/variables/"
           },
@@ -2259,15 +2384,31 @@ const MODULES = [
             "title": "Postman Vault",
             "url": "https://learning.postman.com/docs/sending-requests/postman-vault/postman-vault-secrets/"
           }
-        ],
-        "category": "Запросы в Postman"
+        ]
       },
       {
-        "id": "api-crud",
-        "title": "CRUD: создать, прочитать, изменить, удалить",
-        "minutes": 8,
-        "summary": "Проверка сохранённого результата после изменения данных.",
+        "id": "api-chapter-operations-access",
+        "title": "CRUD и права доступа",
+        "minutes": 15,
+        "summary": "Проверка операции с данными учитывает её сохранённый результат и полномочия пользователя.",
+        "category": "Запросы в Postman",
+        "topics": [
+          {
+            "id": "api-crud",
+            "title": "CRUD: создать, прочитать, изменить, удалить",
+            "minutes": 8
+          },
+          {
+            "id": "api-auth",
+            "title": "Доступ к API в Postman",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "CRUD: создать, прочитать, изменить, удалить"
+          },
           {
             "type": "p",
             "text": "CRUD — четыре основные операции с данными. Ниже используется условный API статей; точные обязательные поля и статусы задаёт его контракт."
@@ -2326,26 +2467,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "JSONPlaceholder имитирует POST, PUT, PATCH и DELETE: изменения не сохраняются. Для настоящей CRUD-цепочки нужен учебный стенд с постоянным хранилищем."
-          }
-        ],
-        "resources": [
-          {
-            "title": "JSONPlaceholder: write operations",
-            "url": "https://jsonplaceholder.typicode.com/guide/"
           },
           {
-            "title": "RFC 5789: PATCH",
-            "url": "https://www.rfc-editor.org/rfc/rfc5789"
-          }
-        ],
-        "category": "Запросы в Postman"
-      },
-      {
-        "id": "api-auth",
-        "title": "Доступ к API в Postman",
-        "minutes": 7,
-        "summary": "Способы передачи доступа и проверка чужих ресурсов.",
-        "blocks": [
+            "type": "heading",
+            "text": "Доступ к API в Postman"
+          },
           {
             "type": "p",
             "text": "Способ доступа задаётся во вкладке Authorization. Postman формирует нужный заголовок или параметр; фактический запрос остаётся доступен для проверки."
@@ -2362,7 +2488,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Минимальный набор проверок"
+            "text": "Минимальный набор проверок",
+            "level": 4
           },
           {
             "type": "list",
@@ -2380,6 +2507,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "JSONPlaceholder: write operations",
+            "url": "https://jsonplaceholder.typicode.com/guide/"
+          },
+          {
+            "title": "RFC 5789: PATCH",
+            "url": "https://www.rfc-editor.org/rfc/rfc5789"
+          },
+          {
             "title": "Postman: authorization",
             "url": "https://learning.postman.com/docs/use/send-requests/authorization/authorization/"
           },
@@ -2387,15 +2522,31 @@ const MODULES = [
             "title": "OAuth 2.0",
             "url": "https://www.rfc-editor.org/rfc/rfc6749"
           }
-        ],
-        "category": "Запросы в Postman"
+        ]
       },
       {
-        "id": "api-tests",
-        "title": "pm.test: основные проверки ответа",
-        "minutes": 10,
-        "summary": "Статус, поля, типы, заголовки и время в Postman.",
+        "id": "api-chapter-response-tests",
+        "title": "Автоматические проверки ответа",
+        "minutes": 19,
+        "summary": "Проверки Postman сопоставляют статус и содержимое ответа с требованиями контракта.",
+        "category": "Автоматические проверки",
+        "topics": [
+          {
+            "id": "api-tests",
+            "title": "pm.test: основные проверки ответа",
+            "minutes": 10
+          },
+          {
+            "id": "api-schema",
+            "title": "Массивы и JSON Schema",
+            "minutes": 9
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "pm.test: основные проверки ответа"
+          },
           {
             "type": "p",
             "text": "Код проверок находится в Scripts → Post-response и выполняется после ответа. После Send вкладка Test Results показывает Passed или Failed для каждой проверки."
@@ -2428,26 +2579,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Failed означает нарушение утверждения; причиной бывает и ошибка теста. Проверка статуса не заменяет проверку данных. Для 204 используется text() и пустая строка: JSON-тела у такого ответа нет."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Postman: test scripts",
-            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/"
           },
           {
-            "title": "Chai: BDD assertions",
-            "url": "https://www.chaijs.com/api/bdd/"
-          }
-        ],
-        "category": "Автоматические проверки"
-      },
-      {
-        "id": "api-schema",
-        "title": "Массивы и JSON Schema",
-        "minutes": 9,
-        "summary": "Проверка структуры ответа и каждого элемента списка.",
-        "blocks": [
+            "type": "heading",
+            "text": "Массивы и JSON Schema"
+          },
           {
             "type": "p",
             "text": "JSON Schema описывает форму данных. Она проверяет типы и обязательные поля, но сама по себе не доказывает правильность фильтрации или расчётов."
@@ -2484,6 +2620,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Postman: test scripts",
+            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/"
+          },
+          {
+            "title": "Chai: BDD assertions",
+            "url": "https://www.chaijs.com/api/bdd/"
+          },
+          {
             "title": "Postman: script examples",
             "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-examples/"
           },
@@ -2491,15 +2635,31 @@ const MODULES = [
             "title": "JSON Schema: object",
             "url": "https://json-schema.org/understanding-json-schema/reference/object"
           }
-        ],
-        "category": "Автоматические проверки"
+        ]
       },
       {
-        "id": "api-chain",
-        "title": "Цепочки запросов: передача id",
-        "minutes": 9,
-        "summary": "Как следующий запрос получает проверенный результат предыдущего.",
+        "id": "api-chapter-collection-runs",
+        "title": "Цепочки запросов и прогоны коллекции",
+        "minutes": 18,
+        "summary": "Связанные запросы выполняют целый сценарий с передачей результатов и разными входными данными.",
+        "category": "Автоматические проверки",
+        "topics": [
+          {
+            "id": "api-chain",
+            "title": "Цепочки запросов: передача id",
+            "minutes": 9
+          },
+          {
+            "id": "api-runner",
+            "title": "Collection Runner и файлы данных",
+            "minutes": 9
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Цепочки запросов: передача id"
+          },
           {
             "type": "p",
             "text": "Цепочка связывает операции: первый запрос получает пользователя, второй — его статьи. Pre-request выполняется перед отправкой; Post-response проверяет ответ и сохраняет нужные значения."
@@ -2533,30 +2693,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Сохранение id выполняется после утверждений. Если статус или id неверны, исключение проверки прерывает этот блок и значение не записывается."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Postman: pre-request scripts",
-            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/pre-request-scripts/"
           },
           {
-            "title": "Postman: variables in scripts",
-            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/pm-variables/"
+            "type": "heading",
+            "text": "Collection Runner и файлы данных"
           },
-          {
-            "title": "Postman: skipRequest",
-            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/pm-execution/"
-          }
-        ],
-        "category": "Автоматические проверки"
-      },
-      {
-        "id": "api-runner",
-        "title": "Collection Runner и файлы данных",
-        "minutes": 9,
-        "summary": "Один запрос с несколькими наборами входных данных.",
-        "blocks": [
           {
             "type": "p",
             "text": "Runner выполняет сохранённые запросы коллекции по порядку. Файл данных задаёт несколько итераций одного сценария; названия колонок CSV становятся переменными."
@@ -2589,6 +2730,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Postman: pre-request scripts",
+            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/pre-request-scripts/"
+          },
+          {
+            "title": "Postman: variables in scripts",
+            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/pm-variables/"
+          },
+          {
+            "title": "Postman: skipRequest",
+            "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/postman-sandbox-reference/pm-execution/"
+          },
+          {
             "title": "Postman: data files",
             "url": "https://learning.postman.com/docs/tests-and-scripts/running-collections/test-data/working-with-data-files/"
           },
@@ -2596,15 +2749,31 @@ const MODULES = [
             "title": "Postman: Collection Runner",
             "url": "https://learning.postman.com/docs/running-collections/intro-to-collection-runs/"
           }
-        ],
-        "category": "Автоматические проверки"
+        ]
       },
       {
-        "id": "api-negative",
-        "title": "Негативные запросы и надёжность API",
-        "minutes": 8,
-        "summary": "Неправильный ввод, доступ, пагинация и повтор операций.",
+        "id": "api-chapter-failures",
+        "title": "Негативные проверки и воспроизведение ошибок",
+        "minutes": 15,
+        "summary": "Неверные запросы выявляют ошибки обработки, которые можно воспроизвести отдельно через curl.",
+        "category": "Диагностика и надёжность",
+        "topics": [
+          {
+            "id": "api-negative",
+            "title": "Негативные запросы и надёжность API",
+            "minutes": 8
+          },
+          {
+            "id": "api-curl",
+            "title": "curl и воспроизведение API-багов",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Негативные запросы и надёжность API"
+          },
           {
             "type": "p",
             "text": "Негативная проверка подтверждает, что API отклоняет недопустимое действие и сохраняет данные корректными. Ожидаемый отказ — успешный результат теста."
@@ -2621,7 +2790,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Пагинация"
+            "text": "Пагинация",
+            "level": 4
           },
           {
             "type": "list",
@@ -2633,31 +2803,17 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Повтор операции"
+            "text": "Повтор операции",
+            "level": 4
           },
           {
             "type": "p",
             "text": "Идемпотентность означает одинаковый итоговый эффект повторов. PUT и DELETE имеют такую семантику, но статусы повторных ответов могут отличаться. POST может создать дубль; защита через idempotency key проверяется, если она предусмотрена API."
-          }
-        ],
-        "resources": [
-          {
-            "title": "OWASP API Security Top 10",
-            "url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
           },
           {
-            "title": "RFC 9110: HTTP semantics",
-            "url": "https://www.rfc-editor.org/rfc/rfc9110"
-          }
-        ],
-        "category": "Диагностика и надёжность"
-      },
-      {
-        "id": "api-curl",
-        "title": "curl и воспроизведение API-багов",
-        "minutes": 7,
-        "summary": "Минимальные команды для запроса вне Postman.",
-        "blocks": [
+            "type": "heading",
+            "text": "curl и воспроизведение API-багов"
+          },
           {
             "type": "p",
             "text": "curl позволяет передать воспроизводимый HTTP-запрос в обычном тексте. В Windows PowerShell имя curl.exe явно выбирает программу curl, а не возможный псевдоним."
@@ -2696,6 +2852,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "OWASP API Security Top 10",
+            "url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+          },
+          {
+            "title": "RFC 9110: HTTP semantics",
+            "url": "https://www.rfc-editor.org/rfc/rfc9110"
+          },
+          {
             "title": "curl manual",
             "url": "https://curl.se/docs/manpage.html"
           },
@@ -2703,8 +2867,7 @@ const MODULES = [
             "title": "Postman: generate code snippets",
             "url": "https://learning.postman.com/docs/sending-requests/create-requests/generate-code-snippets/"
           }
-        ],
-        "category": "Диагностика и надёжность"
+        ]
       }
     ]
   },
@@ -2726,10 +2889,18 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "sql-setup",
-        "title": "Учебная база SQLite",
+        "id": "sql-chapter-database",
+        "title": "Подготовка учебной базы SQLite",
         "minutes": 10,
-        "summary": "Один набор данных для всех SQL-примеров раздела.",
+        "summary": "Общая база с известными данными делает результаты SQL-примеров воспроизводимыми.",
+        "category": "База и выборки",
+        "topics": [
+          {
+            "id": "sql-setup",
+            "title": "Учебная база SQLite",
+            "minutes": 10
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -2772,15 +2943,36 @@ const MODULES = [
             "title": "SQLite: command-line shell",
             "url": "https://www.sqlite.org/cli.html"
           }
-        ],
-        "category": "База и выборки"
+        ]
       },
       {
-        "id": "sql-select",
-        "title": "SELECT и фильтрация",
-        "minutes": 10,
-        "summary": "Чтение нужных столбцов и строк без изменения базы.",
+        "id": "sql-chapter-selection",
+        "title": "Выборка, условия и сортировка",
+        "minutes": 25,
+        "summary": "Запрос SELECT выбирает нужные записи и задаёт форму их отображения без изменения базы.",
+        "category": "База и выборки",
+        "topics": [
+          {
+            "id": "sql-select",
+            "title": "SELECT и фильтрация",
+            "minutes": 10
+          },
+          {
+            "id": "sql-null",
+            "title": "NULL, COALESCE и CASE",
+            "minutes": 8
+          },
+          {
+            "id": "sql-order",
+            "title": "Сортировка, страницы и DISTINCT",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "SELECT и фильтрация"
+          },
           {
             "type": "list",
             "items": [
@@ -2802,22 +2994,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "AND имеет приоритет перед OR. В примере скобки делают active = 1 общим условием для обоих городов. Строки сравниваются в кавычках, имена столбцов — без них. Для проверки фильтра сайта сравнивается состав записей, а не только их количество."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: SELECT",
-            "url": "https://www.sqlite.org/lang_select.html"
-          }
-        ],
-        "category": "База и выборки"
-      },
-      {
-        "id": "sql-null",
-        "title": "NULL, COALESCE и CASE",
-        "minutes": 8,
-        "summary": "Отсутствующее значение и условное отображение результата.",
-        "blocks": [
+            "type": "heading",
+            "text": "NULL, COALESCE и CASE"
+          },
           {
             "type": "list",
             "items": [
@@ -2835,22 +3016,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "WHERE оставляет только истинные условия. Поэтому age \u003c\u003e 25 не включает неизвестный возраст Vera. Для него нужно отдельное OR age IS NULL. NOT IN со значением NULL тоже может неожиданно дать пустой результат. COALESCE меняет вывод запроса, а не исходную запись."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: NULL handling",
-            "url": "https://www.sqlite.org/nulls.html"
-          }
-        ],
-        "category": "База и выборки"
-      },
-      {
-        "id": "sql-order",
-        "title": "Сортировка, страницы и DISTINCT",
-        "minutes": 7,
-        "summary": "Порядок строк, ограничение выдачи и уникальные значения.",
-        "blocks": [
+            "type": "heading",
+            "text": "Сортировка, страницы и DISTINCT"
+          },
           {
             "type": "list",
             "items": [
@@ -2874,16 +3044,41 @@ const MODULES = [
           {
             "title": "SQLite: SELECT and ordering",
             "url": "https://www.sqlite.org/lang_select.html"
+          },
+          {
+            "title": "SQLite: NULL handling",
+            "url": "https://www.sqlite.org/nulls.html"
           }
-        ],
-        "category": "База и выборки"
+        ]
       },
       {
-        "id": "sql-aggregate",
-        "title": "COUNT, SUM, AVG и группировка",
-        "minutes": 10,
-        "summary": "Числа для проверки счётчиков и отчётов.",
+        "id": "sql-chapter-related-data",
+        "title": "Агрегация и запросы к связанным данным",
+        "minutes": 28,
+        "summary": "Связанные таблицы и промежуточные результаты помогают рассчитывать показатели и проверять отношения между записями.",
+        "category": "Аналитика и связи",
+        "topics": [
+          {
+            "id": "sql-aggregate",
+            "title": "COUNT, SUM, AVG и группировка",
+            "minutes": 10
+          },
+          {
+            "id": "sql-join",
+            "title": "INNER JOIN и LEFT JOIN",
+            "minutes": 10
+          },
+          {
+            "id": "sql-subquery",
+            "title": "Подзапросы, EXISTS, UNION и WITH",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "COUNT, SUM, AVG и группировка"
+          },
           {
             "type": "list",
             "items": [
@@ -2909,22 +3104,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Числовые агрегаты пропускают NULL: неизвестный возраст не равен нулю и не участвует в среднем."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: aggregate functions",
-            "url": "https://www.sqlite.org/lang_aggfunc.html"
-          }
-        ],
-        "category": "Аналитика и связи"
-      },
-      {
-        "id": "sql-join",
-        "title": "INNER JOIN и LEFT JOIN",
-        "minutes": 10,
-        "summary": "Данные из связанных таблиц и записи без совпадений.",
-        "blocks": [
+            "type": "heading",
+            "text": "INNER JOIN и LEFT JOIN"
+          },
           {
             "type": "list",
             "items": [
@@ -2946,22 +3130,11 @@ const MODULES = [
               "Фильтр правой таблицы в `WHERE` может убрать строки без совпадения. Фильтр в `ON` ограничивает подбираемые пары, сохраняя строки слева.",
               "Связь «один ко многим» повторяет левую запись; это важно перед SUM."
             ]
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: joins",
-            "url": "https://www.sqlite.org/lang_select.html"
-          }
-        ],
-        "category": "Аналитика и связи"
-      },
-      {
-        "id": "sql-subquery",
-        "title": "Подзапросы, EXISTS, UNION и WITH",
-        "minutes": 8,
-        "summary": "Расчёт внутри запроса и проверка наличия связи.",
-        "blocks": [
+            "type": "heading",
+            "text": "Подзапросы, EXISTS, UNION и WITH"
+          },
           {
             "type": "list",
             "items": [
@@ -2983,18 +3156,42 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "SQLite: aggregate functions",
+            "url": "https://www.sqlite.org/lang_aggfunc.html"
+          },
+          {
+            "title": "SQLite: joins",
+            "url": "https://www.sqlite.org/lang_select.html"
+          },
+          {
             "title": "SQLite: WITH",
             "url": "https://www.sqlite.org/lang_with.html"
           }
-        ],
-        "category": "Аналитика и связи"
+        ]
       },
       {
-        "id": "sql-constraints",
-        "title": "Ключи и ограничения данных",
-        "minutes": 8,
-        "summary": "Правила, которые проверяет сама база.",
+        "id": "sql-chapter-data-changes",
+        "title": "Ограничения данных и транзакции",
+        "minutes": 18,
+        "summary": "Ограничения защищают целостность данных, а транзакция объединяет изменения с возможностью отмены.",
+        "category": "Целостность и изменения",
+        "topics": [
+          {
+            "id": "sql-constraints",
+            "title": "Ключи и ограничения данных",
+            "minutes": 8
+          },
+          {
+            "id": "sql-write",
+            "title": "Изменения и транзакции",
+            "minutes": 10
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Ключи и ограничения данных"
+          },
           {
             "type": "list",
             "items": [
@@ -3013,22 +3210,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Ошибка в примере — ожидаемый результат проверки ограничения. SQLite включает внешние ключи на каждом подключении до BEGIN. CHECK(age \u003e= 0) допускает NULL, если нет NOT NULL. Понятное сообщение пользователю и защита базы проверяются отдельно."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: CREATE TABLE",
-            "url": "https://www.sqlite.org/lang_createtable.html"
-          }
-        ],
-        "category": "Целостность и изменения"
-      },
-      {
-        "id": "sql-write",
-        "title": "Изменения и транзакции",
-        "minutes": 10,
-        "summary": "INSERT, UPDATE, DELETE и отмена учебных изменений.",
-        "blocks": [
+            "type": "heading",
+            "text": "Изменения и транзакции"
+          },
           {
             "type": "list",
             "items": [
@@ -3053,18 +3239,38 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "SQLite: CREATE TABLE",
+            "url": "https://www.sqlite.org/lang_createtable.html"
+          },
+          {
             "title": "SQLite: transactions",
             "url": "https://www.sqlite.org/lang_transaction.html"
           }
-        ],
-        "category": "Целостность и изменения"
+        ]
       },
       {
-        "id": "sql-validation",
-        "title": "Проверка данных после действия",
-        "minutes": 8,
-        "summary": "Поиск записи, дубликатов и неверных связей.",
+        "id": "sql-chapter-diagnostics",
+        "title": "Проверка данных и диагностика запросов",
+        "minutes": 13,
+        "summary": "SQL помогает проверить результат действия приложения и исследовать способ поиска нужных записей.",
+        "category": "Диагностика данных",
+        "topics": [
+          {
+            "id": "sql-validation",
+            "title": "Проверка данных после действия",
+            "minutes": 8
+          },
+          {
+            "id": "sql-index",
+            "title": "Индекс и план запроса",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Проверка данных после действия"
+          },
           {
             "type": "list",
             "items": [
@@ -3082,22 +3288,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "JOIN с комментариями повторяет статью по числу комментариев. SUM(views) после такого соединения может завысить итог: в этой базе получится 500 вместо 400. Для суммы просмотров нужен набор с одной строкой на статью."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "SQLite: PRAGMA",
-            "url": "https://www.sqlite.org/pragma.html"
-          }
-        ],
-        "category": "Диагностика данных"
-      },
-      {
-        "id": "sql-index",
-        "title": "Индекс и план запроса",
-        "minutes": 5,
-        "summary": "Базовая диагностика медленного поиска.",
-        "blocks": [
+            "type": "heading",
+            "text": "Индекс и план запроса"
+          },
           {
             "type": "p",
             "text": "Индекс — дополнительная структура поиска по значениям столбцов. Он ускоряет подходящие запросы, но занимает место и добавляет работу при изменении данных."
@@ -3119,17 +3314,28 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "SQLite: PRAGMA",
+            "url": "https://www.sqlite.org/pragma.html"
+          },
+          {
             "title": "SQLite: EXPLAIN QUERY PLAN",
             "url": "https://www.sqlite.org/eqp.html"
           }
-        ],
-        "category": "Диагностика данных"
+        ]
       },
       {
-        "id": "sql-exercises",
-        "title": "Пять типовых SQL-проверок",
+        "id": "sql-chapter-practice",
+        "title": "Типовые SQL-проверки",
         "minutes": 10,
-        "summary": "Короткие готовые связки команд на общей базе.",
+        "summary": "Готовые запросы объединяют основные конструкции SQL в практические проверки общей базы.",
+        "category": "Разобранные запросы",
+        "topics": [
+          {
+            "id": "sql-exercises",
+            "title": "Пять типовых SQL-проверок",
+            "minutes": 10
+          }
+        ],
         "blocks": [
           {
             "type": "code",
@@ -3152,8 +3358,7 @@ const MODULES = [
             "title": "SQLite: SQL language reference",
             "url": "https://www.sqlite.org/lang.html"
           }
-        ],
-        "category": "Разобранные запросы"
+        ]
       }
     ]
   },
@@ -3174,11 +3379,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "git-model",
-        "title": "Git: рабочая папка, индекс, коммит",
-        "minutes": 5,
-        "summary": "Как правка становится сохранённой версией проекта.",
+        "id": "git-chapter-local-workflow",
+        "title": "От правки до первого коммита",
+        "minutes": 11,
+        "summary": "Как изменение проходит через рабочую папку и индекс в сохранённую версию проекта.",
+        "category": "Основы Git",
+        "topics": [
+          {
+            "id": "git-model",
+            "title": "Git: рабочая папка, индекс, коммит",
+            "minutes": 5
+          },
+          {
+            "id": "git-first",
+            "title": "Настройки и первый коммит",
+            "minutes": 6
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Git: рабочая папка, индекс, коммит"
+          },
           {
             "type": "p",
             "text": "Git хранит историю изменений проекта. QA использует его для тестов, коллекций Postman и документации. GitHub — сервис для удалённых репозиториев и совместного ревью."
@@ -3205,22 +3427,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Если после git add файл изменился ещё раз, в коммит попадёт подготовленная версия. Новый фрагмент остаётся только в рабочей папке до следующего add."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Pro Git: основы",
-            "url": "https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F"
-          }
-        ],
-        "category": "Основы Git"
-      },
-      {
-        "id": "git-first",
-        "title": "Настройки и первый коммит",
-        "minutes": 6,
-        "summary": "Минимальный локальный цикл создания версии.",
-        "blocks": [
+            "type": "heading",
+            "text": "Настройки и первый коммит"
+          },
           {
             "type": "p",
             "text": "После установки Git команда git --version подтверждает доступность программы. Имя и email автора записываются в коммиты; эти настройки не выполняют вход в GitHub."
@@ -3257,6 +3468,10 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Pro Git: основы",
+            "url": "https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F"
+          },
+          {
             "title": "Git: init",
             "url": "https://git-scm.com/docs/git-init"
           },
@@ -3264,15 +3479,31 @@ const MODULES = [
             "title": "Git: config",
             "url": "https://git-scm.com/docs/git-config"
           }
-        ],
-        "category": "Основы Git"
+        ]
       },
       {
-        "id": "git-diff",
-        "title": "status, diff и история",
-        "minutes": 5,
-        "summary": "Что изменено и какая версия участвует в проверке.",
+        "id": "git-chapter-changes-and-files",
+        "title": "Состав репозитория и история изменений",
+        "minutes": 10,
+        "summary": "Как понять состояние проекта и оставить в истории только нужные файлы.",
+        "category": "История и файлы",
+        "topics": [
+          {
+            "id": "git-diff",
+            "title": "status, diff и история",
+            "minutes": 5
+          },
+          {
+            "id": "git-ignore",
+            "title": ".gitignore и состав репозитория",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "status, diff и история"
+          },
           {
             "type": "p",
             "text": "Перед коммитом важны две разные разницы: правки рабочей папки и уже подготовленные изменения. Git показывает их отдельными командами."
@@ -3305,26 +3536,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Хеш коммита помогает воспроизвести проверку. При незакоммиченных изменениях одного хеша недостаточно: фактические файлы уже отличаются от снимка."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Git: diff",
-            "url": "https://git-scm.com/docs/git-diff"
           },
           {
-            "title": "Git: log",
-            "url": "https://git-scm.com/docs/git-log"
-          }
-        ],
-        "category": "История и файлы"
-      },
-      {
-        "id": "git-ignore",
-        "title": ".gitignore и состав репозитория",
-        "minutes": 5,
-        "summary": "Какие файлы сохраняются вместе с тестами.",
-        "blocks": [
+            "type": "heading",
+            "text": ".gitignore и состав репозитория"
+          },
           {
             "type": "p",
             "text": ".gitignore перечисляет файлы, которые Git не должен предлагать для добавления. Правила действуют на неотслеживаемые файлы; уже закоммиченный файл автоматически не исчезает."
@@ -3357,6 +3573,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Git: diff",
+            "url": "https://git-scm.com/docs/git-diff"
+          },
+          {
+            "title": "Git: log",
+            "url": "https://git-scm.com/docs/git-log"
+          },
+          {
             "title": "Git: ignore",
             "url": "https://git-scm.com/docs/gitignore"
           },
@@ -3364,15 +3588,31 @@ const MODULES = [
             "title": "Git: rm",
             "url": "https://git-scm.com/docs/git-rm"
           }
-        ],
-        "category": "История и файлы"
+        ]
       },
       {
-        "id": "git-branch",
-        "title": "Ветки и объединение",
-        "minutes": 6,
-        "summary": "Отдельная ветка для изменения тестов.",
+        "id": "git-chapter-branches-and-remotes",
+        "title": "Ветки и обмен изменениями",
+        "minutes": 12,
+        "summary": "Как работать над отдельным изменением и синхронизировать его с удалённым репозиторием.",
+        "category": "Совместная работа",
+        "topics": [
+          {
+            "id": "git-branch",
+            "title": "Ветки и объединение",
+            "minutes": 6
+          },
+          {
+            "id": "git-remote",
+            "title": "clone, fetch, pull и push",
+            "minutes": 6
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Ветки и объединение"
+          },
           {
             "type": "p",
             "text": "Ветка позволяет подготовить изменение отдельно от основной версии. main обычно содержит общую рабочую версию; название основной ветки зависит от репозитория."
@@ -3404,26 +3644,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Перед переключением status помогает заметить незавершённые правки. Они не всегда принадлежат только текущей ветке: Git может перенести их при switch или запретить переключение, если данные будут перезаписаны."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Git: switch",
-            "url": "https://git-scm.com/docs/git-switch"
           },
           {
-            "title": "Git: merge",
-            "url": "https://git-scm.com/docs/git-merge"
-          }
-        ],
-        "category": "Совместная работа"
-      },
-      {
-        "id": "git-remote",
-        "title": "clone, fetch, pull и push",
-        "minutes": 6,
-        "summary": "Получение проекта и обмен изменениями с GitHub.",
-        "blocks": [
+            "type": "heading",
+            "text": "clone, fetch, pull и push"
+          },
           {
             "type": "list",
             "items": [
@@ -3461,6 +3686,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Git: switch",
+            "url": "https://git-scm.com/docs/git-switch"
+          },
+          {
+            "title": "Git: merge",
+            "url": "https://git-scm.com/docs/git-merge"
+          },
+          {
             "title": "Git: fetch",
             "url": "https://git-scm.com/docs/git-fetch"
           },
@@ -3472,15 +3705,31 @@ const MODULES = [
             "title": "Git: push",
             "url": "https://git-scm.com/docs/git-push"
           }
-        ],
-        "category": "Совместная работа"
+        ]
       },
       {
-        "id": "git-pr",
-        "title": "Pull request и ревью",
-        "minutes": 5,
-        "summary": "Как изменение попадает в общую ветку.",
+        "id": "git-chapter-review-and-merge",
+        "title": "Pull request, ревью и конфликты",
+        "minutes": 11,
+        "summary": "Как предложенное изменение проходит проверку и объединяется с общей версией кода.",
+        "category": "Совместная работа",
+        "topics": [
+          {
+            "id": "git-pr",
+            "title": "Pull request и ревью",
+            "minutes": 5
+          },
+          {
+            "id": "git-conflict",
+            "title": "Конфликт при merge",
+            "minutes": 6
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Pull request и ревью"
+          },
           {
             "type": "p",
             "text": "Pull request, или PR, — предложение объединить изменения одной ветки с другой. В GitLab аналог называется merge request. Отправка ветки через push сама по себе не создаёт PR."
@@ -3507,22 +3756,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Зелёные автоматические проверки подтверждают только выполненные проверки. Перед объединением также важны правильные ожидания, понятные тестовые данные и отсутствие случайных файлов или секретов."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GitHub: pull requests",
-            "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
-          }
-        ],
-        "category": "Совместная работа"
-      },
-      {
-        "id": "git-conflict",
-        "title": "Конфликт при merge",
-        "minutes": 6,
-        "summary": "Как получить правильный общий вариант файла.",
-        "blocks": [
+            "type": "heading",
+            "text": "Конфликт при merge"
+          },
           {
             "type": "p",
             "text": "Конфликт возникает, когда Git не может сам совместить изменения. Например, две ветки изменили одну строку ожидания теста. Коммиты сохраняются; требуется выбрать итоговое содержание."
@@ -3557,18 +3795,38 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "GitHub: pull requests",
+            "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+          },
+          {
             "title": "Git: merge",
             "url": "https://git-scm.com/docs/git-merge"
           }
-        ],
-        "category": "Совместная работа"
+        ]
       },
       {
-        "id": "git-undo",
-        "title": "Отмена изменений: restore, revert, reset",
-        "minutes": 6,
-        "summary": "Команда зависит от того, где находится изменение.",
+        "id": "git-chapter-recovery-and-versions",
+        "title": "Отмена изменений и сохранение версий",
+        "minutes": 12,
+        "summary": "Как восстановить нужное состояние проекта и точно обозначить проверенную версию.",
+        "category": "Восстановление и версии",
+        "topics": [
+          {
+            "id": "git-undo",
+            "title": "Отмена изменений: restore, revert, reset",
+            "minutes": 6
+          },
+          {
+            "id": "git-stash",
+            "title": "Stash, теги и версия проверки",
+            "minutes": 6
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Отмена изменений: restore, revert, reset"
+          },
           {
             "type": "p",
             "text": "Перед отменой status и diff показывают, какие данные требуется сохранить. Удаление файла из подготовки, отмена правки и отмена коммита — разные операции."
@@ -3618,30 +3876,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "reset --hard дополнительно перезаписывает рабочие файлы и может уничтожить незакоммиченные правки. Для простого удаления файла из индекса эта команда не нужна."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Git: restore",
-            "url": "https://git-scm.com/docs/git-restore"
           },
           {
-            "title": "Git: revert",
-            "url": "https://git-scm.com/docs/git-revert"
+            "type": "heading",
+            "text": "Stash, теги и версия проверки"
           },
-          {
-            "title": "Git: reset",
-            "url": "https://git-scm.com/docs/git-reset"
-          }
-        ],
-        "category": "Восстановление и версии"
-      },
-      {
-        "id": "git-stash",
-        "title": "Stash, теги и версия проверки",
-        "minutes": 6,
-        "summary": "Временный черновик и точная ссылка на проверенный код.",
-        "blocks": [
           {
             "type": "p",
             "text": "Stash временно сохраняет незакоммиченные изменения, например перед переходом на другую ветку. Это локальное хранилище: обычный push его не отправляет."
@@ -3677,6 +3916,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Git: restore",
+            "url": "https://git-scm.com/docs/git-restore"
+          },
+          {
+            "title": "Git: revert",
+            "url": "https://git-scm.com/docs/git-revert"
+          },
+          {
+            "title": "Git: reset",
+            "url": "https://git-scm.com/docs/git-reset"
+          },
+          {
             "title": "Git: stash",
             "url": "https://git-scm.com/docs/git-stash"
           },
@@ -3684,8 +3935,7 @@ const MODULES = [
             "title": "Git: tag",
             "url": "https://git-scm.com/docs/git-tag"
           }
-        ],
-        "category": "Восстановление и версии"
+        ]
       }
     ]
   },
@@ -3707,11 +3957,38 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "linux-environment",
-        "title": "Bash и рабочая папка",
-        "minutes": 5,
-        "summary": "Среда для всех Linux-примеров этого раздела.",
+        "id": "linux-chapter-shell-and-files",
+        "title": "Рабочая среда, файлы и права",
+        "minutes": 22,
+        "summary": "Основные операции с файлами в Bash и причины отказа в доступе.",
+        "category": "Среда и файлы",
+        "topics": [
+          {
+            "id": "linux-environment",
+            "title": "Bash и рабочая папка",
+            "minutes": 5
+          },
+          {
+            "id": "linux-paths",
+            "title": "Пути и каталоги",
+            "minutes": 5
+          },
+          {
+            "id": "linux-files",
+            "title": "Файлы: создание, копирование, удаление",
+            "minutes": 5
+          },
+          {
+            "id": "linux-permissions",
+            "title": "Права доступа и запуск скрипта",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Bash и рабочая папка"
+          },
           {
             "type": "list",
             "items": [
@@ -3730,22 +4007,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Остальные примеры используют эту папку и не требуют доступа к серверу. Внутри компании Linux чаще всего нужен для журналов, файлов, процессов и сетевой диагностики."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Руководство GNU Bash",
-            "url": "https://www.gnu.org/software/bash/manual/bash.html"
-          }
-        ],
-        "category": "Среда и файлы"
-      },
-      {
-        "id": "linux-paths",
-        "title": "Пути и каталоги",
-        "minutes": 5,
-        "summary": "Навигация по файловой системе.",
-        "blocks": [
+            "type": "heading",
+            "text": "Пути и каталоги"
+          },
           {
             "type": "list",
             "items": [
@@ -3764,22 +4030,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Путь с пробелом заключается в кавычки. Регистр важен: App.log и app.log обычно разные файлы. Имена с точкой, например .env, скрыты из обычного ls, но это не защита содержимого."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GNU Coreutils",
-            "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
-          }
-        ],
-        "category": "Среда и файлы"
-      },
-      {
-        "id": "linux-files",
-        "title": "Файлы: создание, копирование, удаление",
-        "minutes": 5,
-        "summary": "Частые операции с тестовыми файлами.",
-        "blocks": [
+            "type": "heading",
+            "text": "Файлы: создание, копирование, удаление"
+          },
           {
             "type": "list",
             "items": [
@@ -3800,22 +4055,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "rm не отправляет файл в обычную корзину. Звёздочка * подставляет подходящие имена, поэтому для удаления учебного файла указан точный путь. `cp -r` копирует каталог со всем содержимым."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GNU Coreutils",
-            "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
-          }
-        ],
-        "category": "Среда и файлы"
-      },
-      {
-        "id": "linux-permissions",
-        "title": "Права доступа и запуск скрипта",
-        "minutes": 7,
-        "summary": "Почему файл виден, но не читается или не запускается.",
-        "blocks": [
+            "type": "heading",
+            "text": "Права доступа и запуск скрипта"
+          },
           {
             "type": "list",
             "items": [
@@ -3837,18 +4081,48 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Руководство GNU Bash",
+            "url": "https://www.gnu.org/software/bash/manual/bash.html"
+          },
+          {
             "title": "GNU Coreutils",
             "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
           }
-        ],
-        "category": "Среда и файлы"
+        ]
       },
       {
-        "id": "linux-logs",
-        "title": "Чтение файлов и логов",
-        "minutes": 7,
-        "summary": "Поиск записи об ошибке и наблюдение за новыми событиями.",
+        "id": "linux-chapter-logs-and-text",
+        "title": "Поиск в логах и обработка текста",
+        "minutes": 27,
+        "summary": "Как найти нужную запись и собрать из текстового вывода полезный отчёт.",
+        "category": "Текст и логи",
+        "topics": [
+          {
+            "id": "linux-logs",
+            "title": "Чтение файлов и логов",
+            "minutes": 7
+          },
+          {
+            "id": "linux-grep-find",
+            "title": "grep и find",
+            "minutes": 6
+          },
+          {
+            "id": "linux-streams",
+            "title": "Конвейеры и перенаправления",
+            "minutes": 7
+          },
+          {
+            "id": "linux-text",
+            "title": "Обработка текстового отчёта",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Чтение файлов и логов"
+          },
           {
             "type": "list",
             "items": [
@@ -3866,22 +4140,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "В баг-репорте полезны время, действие и request_id — метка конкретного запроса. Соседние строки дают контекст ошибки. Учебный app.log создан вручную и не является доказательством сбоя сайта."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GNU Coreutils",
-            "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
-          }
-        ],
-        "category": "Текст и логи"
-      },
-      {
-        "id": "linux-grep-find",
-        "title": "grep и find",
-        "minutes": 6,
-        "summary": "Поиск текста внутри файла и поиск самого файла.",
-        "blocks": [
+            "type": "heading",
+            "text": "grep и find"
+          },
           {
             "type": "list",
             "items": [
@@ -3899,22 +4162,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "У grep код завершения 0 означает найденное совпадение, 1 — отсутствие, 2 — ошибку. Ненайденная строка и недоступный файл — разные результаты. Для поиска request_id не требуется разбирать весь журнал вручную."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GNU grep",
-            "url": "https://www.gnu.org/software/grep/manual/grep.html"
-          }
-        ],
-        "category": "Текст и логи"
-      },
-      {
-        "id": "linux-streams",
-        "title": "Конвейеры и перенаправления",
-        "minutes": 7,
-        "summary": "Сохранение результата и сообщений об ошибках.",
-        "blocks": [
+            "type": "heading",
+            "text": "Конвейеры и перенаправления"
+          },
           {
             "type": "list",
             "items": [
@@ -3933,22 +4185,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Входной файл и файл после \u003e должны отличаться: перенаправление обнуляет назначение до запуска команды. `set -o pipefail` позволяет заметить ошибку внутри конвейера, которую иначе может скрыть успешная последняя команда."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Bash: перенаправления",
-            "url": "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
-          }
-        ],
-        "category": "Текст и логи"
-      },
-      {
-        "id": "linux-text",
-        "title": "Обработка текстового отчёта",
-        "minutes": 7,
-        "summary": "Частые связки sort, uniq, cut, awk и sed.",
-        "blocks": [
+            "type": "heading",
+            "text": "Обработка текстового отчёта"
+          },
           {
             "type": "list",
             "items": [
@@ -3973,16 +4214,40 @@ const MODULES = [
           {
             "title": "GNU Coreutils",
             "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+          },
+          {
+            "title": "GNU grep",
+            "url": "https://www.gnu.org/software/grep/manual/grep.html"
+          },
+          {
+            "title": "Bash: перенаправления",
+            "url": "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
           }
-        ],
-        "category": "Текст и логи"
+        ]
       },
       {
-        "id": "linux-processes",
-        "title": "Процессы и ресурсы",
-        "minutes": 7,
-        "summary": "Поиск работающей программы и завершение своего процесса.",
+        "id": "linux-chapter-processes-and-env",
+        "title": "Процессы и настройки запуска",
+        "minutes": 14,
+        "summary": "Как передать программе настройки и проверить её работу в системе.",
+        "category": "Процессы и окружение",
+        "topics": [
+          {
+            "id": "linux-processes",
+            "title": "Процессы и ресурсы",
+            "minutes": 7
+          },
+          {
+            "id": "linux-env",
+            "title": "Переменные окружения и скрипт",
+            "minutes": 7
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Процессы и ресурсы"
+          },
           {
             "type": "list",
             "items": [
@@ -4000,22 +4265,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Пример завершает только созданный sleep, а не процесс приложения. Высокий CPU сам по себе не доказывает баг: важны действие, длительность нагрузки и повторяемость."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Linux: сигналы",
-            "url": "https://man7.org/linux/man-pages/man7/signal.7.html"
-          }
-        ],
-        "category": "Процессы и окружение"
-      },
-      {
-        "id": "linux-env",
-        "title": "Переменные окружения и скрипт",
-        "minutes": 7,
-        "summary": "Настройки запуска без изменения кода.",
-        "blocks": [
+            "type": "heading",
+            "text": "Переменные окружения и скрипт"
+          },
           {
             "type": "list",
             "items": [
@@ -4046,18 +4300,38 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Linux: сигналы",
+            "url": "https://man7.org/linux/man-pages/man7/signal.7.html"
+          },
+          {
             "title": "Руководство GNU Bash",
             "url": "https://www.gnu.org/software/bash/manual/bash.html"
           }
-        ],
-        "category": "Процессы и окружение"
+        ]
       },
       {
-        "id": "linux-network",
-        "title": "curl и сетевая диагностика",
-        "minutes": 7,
-        "summary": "Запрос к серверу из терминала.",
+        "id": "linux-chapter-network-and-server",
+        "title": "Диагностика сети и сервера",
+        "minutes": 15,
+        "summary": "Как проверить доступность стенда и найти причину сбоя на сервере.",
+        "category": "Сеть и сервер",
+        "topics": [
+          {
+            "id": "linux-network",
+            "title": "curl и сетевая диагностика",
+            "minutes": 7
+          },
+          {
+            "id": "linux-ops",
+            "title": "Службы, архивы и SSH",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "curl и сетевая диагностика"
+          },
           {
             "type": "list",
             "items": [
@@ -4079,22 +4353,11 @@ const MODULES = [
               "`ss -ltnp` — локальные слушающие TCP-порты и процессы при доступных правах.",
               "Ошибка DNS или соединения возникает до HTTP-ответа. HTTP 404 без --fail не обязательно делает код завершения curl ненулевым."
             ]
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "curl: руководство",
-            "url": "https://curl.se/docs/manpage.html"
-          }
-        ],
-        "category": "Сеть и сервер"
-      },
-      {
-        "id": "linux-ops",
-        "title": "Службы, архивы и SSH",
-        "minutes": 8,
-        "summary": "Минимум для диагностики Linux-стенда.",
-        "blocks": [
+            "type": "heading",
+            "text": "Службы, архивы и SSH"
+          },
           {
             "type": "list",
             "items": [
@@ -4130,11 +4393,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "curl: руководство",
+            "url": "https://curl.se/docs/manpage.html"
+          },
+          {
             "title": "systemctl",
             "url": "https://www.freedesktop.org/software/systemd/man/latest/systemctl.html"
           }
-        ],
-        "category": "Сеть и сервер"
+        ]
       }
     ]
   },
@@ -4156,10 +4422,18 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "python-setup",
-        "title": "Среда и зависимости",
+        "id": "python-chapter-environment",
+        "title": "Среда и зависимости автотестов",
         "minutes": 8,
-        "summary": "Один проект — отдельная среда и воспроизводимый набор пакетов.",
+        "summary": "Отдельная среда сохраняет согласованный набор инструментов для запуска тестов.",
+        "category": "Подготовка проекта",
+        "topics": [
+          {
+            "id": "python-setup",
+            "title": "Среда и зависимости",
+            "minutes": 8
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -4200,15 +4474,36 @@ const MODULES = [
             "title": "Установка пакетов",
             "url": "https://packaging.python.org/en/latest/tutorials/installing-packages/"
           }
-        ],
-        "category": "Основы Python"
+        ]
       },
       {
-        "id": "python-values",
-        "title": "Типы и встроенные функции",
-        "minutes": 5,
-        "summary": "Минимум Python для чтения данных и проверок.",
+        "id": "python-chapter-data-reference",
+        "title": "Типы и методы работы с данными",
+        "minutes": 18,
+        "summary": "Основные операции Python для подготовки тестовых данных и чтения ответов API.",
+        "category": "Справочник Python",
+        "topics": [
+          {
+            "id": "python-values",
+            "title": "Типы и встроенные функции",
+            "minutes": 5
+          },
+          {
+            "id": "python-strings",
+            "title": "Нужные методы строк",
+            "minutes": 5
+          },
+          {
+            "id": "python-collections",
+            "title": "Списки и словари в тестах",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Типы и встроенные функции"
+          },
           {
             "type": "p",
             "text": "В API-тестах важно различать значение и тип. Число 1 и строка \"1\" — разные данные; JSON null превращается в Python None. Преобразование перед проверкой может скрыть ошибку контракта."
@@ -4240,26 +4535,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "bool — подкласс int: isinstance(True, int) возвращает True. Для строгой проверки JSON-числа подходит type(value) is int. Пустая коллекция ложна, но all([]) возвращает True."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Python: introduction",
-            "url": "https://docs.python.org/3/tutorial/introduction.html"
           },
           {
-            "title": "Встроенные типы Python",
-            "url": "https://docs.python.org/3/library/stdtypes.html"
-          }
-        ],
-        "category": "Основы Python"
-      },
-      {
-        "id": "python-strings",
-        "title": "Нужные методы строк",
-        "minutes": 5,
-        "summary": "Нормализация, поиск и сборка строк.",
-        "blocks": [
+            "type": "heading",
+            "text": "Нужные методы строк"
+          },
           {
             "type": "p",
             "text": "Строковые методы полезны при разборе логов, подготовке данных и проверке текста. Строка неизменяема: метод возвращает новую строку."
@@ -4291,22 +4571,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Нормализация должна соответствовать требованию. Если приложение обязано сохранять пробелы или регистр, strip() или lower() в тесте скроют дефект."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Python: методы строк",
-            "url": "https://docs.python.org/3/library/stdtypes.html#string-methods"
-          }
-        ],
-        "category": "Основы Python"
-      },
-      {
-        "id": "python-collections",
-        "title": "Списки и словари в тестах",
-        "minutes": 8,
-        "summary": "Основные операции с JSON-ответами и наборами данных.",
-        "blocks": [
+            "type": "heading",
+            "text": "Списки и словари в тестах"
+          },
           {
             "type": "p",
             "text": "JSON-объект обычно становится dict, массив — list. Словарь удобен для полей сущности, список — для коллекции записей. set помогает проверять уникальность, tuple хранит фиксированный набор значений."
@@ -4343,18 +4612,46 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Python: introduction",
+            "url": "https://docs.python.org/3/tutorial/introduction.html"
+          },
+          {
+            "title": "Встроенные типы Python",
+            "url": "https://docs.python.org/3/library/stdtypes.html"
+          },
+          {
+            "title": "Python: методы строк",
+            "url": "https://docs.python.org/3/library/stdtypes.html#string-methods"
+          },
+          {
             "title": "Python: datastructures",
             "url": "https://docs.python.org/3/tutorial/datastructures.html"
           }
-        ],
-        "category": "Основы Python"
+        ]
       },
       {
-        "id": "python-control",
-        "title": "Условия, циклы и comprehensions",
-        "minutes": 5,
-        "summary": "Как фильтровать данные и обходить ответы.",
+        "id": "python-chapter-control-and-functions",
+        "title": "Условия, циклы и функции",
+        "minutes": 10,
+        "summary": "Как обрабатывать наборы данных и выделять повторяющиеся действия в короткие функции.",
+        "category": "Справочник Python",
+        "topics": [
+          {
+            "id": "python-control",
+            "title": "Условия, циклы и comprehensions",
+            "minutes": 5
+          },
+          {
+            "id": "python-functions",
+            "title": "Функции и аргументы",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Условия, циклы и comprehensions"
+          },
           {
             "type": "p",
             "text": "В автотестах условия чаще нужны для подготовки данных. Ожидаемый результат задаётся явно: ветвление, которое принимает любой ответ сервера, превращает проверку в формальность."
@@ -4384,22 +4681,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "while подходит для повторения до условия, но ожидания UI удобнее выражать средствами Playwright или Selenium: они ограничены таймаутом и дают понятную ошибку."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Python: controlflow",
-            "url": "https://docs.python.org/3/tutorial/controlflow.html"
-          }
-        ],
-        "category": "Основы Python"
-      },
-      {
-        "id": "python-functions",
-        "title": "Функции и аргументы",
-        "minutes": 5,
-        "summary": "Небольшие функции убирают дубли в подготовке данных.",
-        "blocks": [
+            "type": "heading",
+            "text": "Функции и аргументы"
+          },
           {
             "type": "p",
             "text": "Функция выделяет повторяющееся действие и возвращает результат через return. В тестах полезны небольшие генераторы данных и функции сравнения; логика самой проверки должна оставаться видимой."
@@ -4433,15 +4719,31 @@ const MODULES = [
             "title": "Python: controlflow",
             "url": "https://docs.python.org/3/tutorial/controlflow.html"
           }
-        ],
-        "category": "Основы Python"
+        ]
       },
       {
-        "id": "python-errors",
-        "title": "Исключения и with",
-        "minutes": 5,
-        "summary": "Ошибки не должны превращаться в успешные проверки.",
+        "id": "python-chapter-resources-and-files",
+        "title": "Исключения и работа с файлами",
+        "minutes": 13,
+        "summary": "Как читать и сохранять тестовые данные с корректной обработкой ошибок и ресурсов.",
+        "category": "Код автотестов",
+        "topics": [
+          {
+            "id": "python-errors",
+            "title": "Исключения и with",
+            "minutes": 5
+          },
+          {
+            "id": "python-files",
+            "title": "Pathlib, JSON и CSV",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Исключения и with"
+          },
           {
             "type": "p",
             "text": "Исключение прерывает обычное выполнение. В тестах ожидаемая ошибка проверяется явно, неожиданная должна приводить к падению. Перехват Exception с пустым pass скрывает реальную причину сбоя."
@@ -4474,22 +4776,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Ожидаемое исключение в pytest проверяется через pytest.raises — пример в главе об assertions."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Python: errors",
-            "url": "https://docs.python.org/3/tutorial/errors.html"
-          }
-        ],
-        "category": "Код и данные"
-      },
-      {
-        "id": "python-files",
-        "title": "Pathlib, JSON и CSV",
-        "minutes": 8,
-        "summary": "Чтение фикстур и проверка экспортов.",
-        "blocks": [
+            "type": "heading",
+            "text": "Pathlib, JSON и CSV"
+          },
           {
             "type": "p",
             "text": "Pathlib работает с путями, json — с JSON, csv — с таблицами в текстовом файле. Явная кодировка UTF-8 предотвращает различия между окружениями."
@@ -4523,6 +4814,10 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Python: errors",
+            "url": "https://docs.python.org/3/tutorial/errors.html"
+          },
+          {
             "title": "pathlib",
             "url": "https://docs.python.org/3/library/pathlib.html"
           },
@@ -4534,15 +4829,36 @@ const MODULES = [
             "title": "csv",
             "url": "https://docs.python.org/3/library/csv.html"
           }
-        ],
-        "category": "Код и данные"
+        ]
       },
       {
-        "id": "python-modules",
-        "title": "Структура проекта автотестов",
-        "minutes": 5,
-        "summary": "Минимальная организация без лишних слоёв.",
+        "id": "python-chapter-code-organization",
+        "title": "Структура проекта и отладка",
+        "minutes": 15,
+        "summary": "Как организовать повторно используемый код и находить причину ошибки в тесте.",
+        "category": "Код автотестов",
+        "topics": [
+          {
+            "id": "python-modules",
+            "title": "Структура проекта автотестов",
+            "minutes": 5
+          },
+          {
+            "id": "python-oop",
+            "title": "Классы и dataclass",
+            "minutes": 5
+          },
+          {
+            "id": "python-debug",
+            "title": "Типы и отладка",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Структура проекта автотестов"
+          },
           {
             "type": "p",
             "text": "Модуль — файл .py, пакет — группа модулей. Разделение по назначению помогает находить тесты и повторно использовать подготовку, не смешивая её с проверками."
@@ -4566,22 +4882,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Для нескольких тестов достаточно tests/ и conftest.py. Отдельные клиенты и страницы появляются при повторении действий. В Git входят исходники и зависимости; среды, кэш и результаты прогонов обычно исключаются."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Python: modules",
-            "url": "https://docs.python.org/3/tutorial/modules.html"
-          }
-        ],
-        "category": "Код и данные"
-      },
-      {
-        "id": "python-oop",
-        "title": "Классы и dataclass",
-        "minutes": 5,
-        "summary": "Класс объединяет данные с действиями над ними.",
-        "blocks": [
+            "type": "heading",
+            "text": "Классы и dataclass"
+          },
           {
             "type": "p",
             "text": "В автотестах класс чаще представляет API-клиент или страницу. Объект хранит подключение и предоставляет понятные методы. dataclass сокращает описание простого набора данных."
@@ -4604,26 +4909,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Для простого преобразования достаточно функции. Класс оправдан, когда несколько действий используют одно состояние. Большая цепочка наследования редко нужна в небольшом проекте автотестов."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Python: classes",
-            "url": "https://docs.python.org/3/tutorial/classes.html"
           },
           {
-            "title": "dataclasses",
-            "url": "https://docs.python.org/3/library/dataclasses.html"
-          }
-        ],
-        "category": "Код и данные"
-      },
-      {
-        "id": "python-debug",
-        "title": "Типы и отладка",
-        "minutes": 5,
-        "summary": "Как быстро найти фактическое значение и место ошибки.",
-        "blocks": [
+            "type": "heading",
+            "text": "Типы и отладка"
+          },
           {
             "type": "p",
             "text": "Аннотации типов описывают ожидаемые данные и помогают редактору находить ошибки. Python не проверяет их автоматически при выполнении: неверный ответ API всё равно требует assert."
@@ -4650,6 +4940,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Python: modules",
+            "url": "https://docs.python.org/3/tutorial/modules.html"
+          },
+          {
+            "title": "Python: classes",
+            "url": "https://docs.python.org/3/tutorial/classes.html"
+          },
+          {
+            "title": "dataclasses",
+            "url": "https://docs.python.org/3/library/dataclasses.html"
+          },
+          {
             "title": "typing",
             "url": "https://docs.python.org/3/library/typing.html"
           },
@@ -4657,15 +4959,36 @@ const MODULES = [
             "title": "pdb",
             "url": "https://docs.python.org/3/library/pdb.html"
           }
-        ],
-        "category": "Код и данные"
+        ]
       },
       {
-        "id": "python-requests",
-        "title": "Requests: HTTP из Python",
-        "minutes": 10,
-        "summary": "Запрос, ответ и основные аргументы библиотеки.",
+        "id": "python-chapter-requests-and-assertions",
+        "title": "HTTP-запросы и первые проверки pytest",
+        "minutes": 23,
+        "summary": "Как отправить запрос из Python и выразить ожидаемый результат в запускаемом тесте.",
+        "category": "Pytest и API-тесты",
+        "topics": [
+          {
+            "id": "python-requests",
+            "title": "Requests: HTTP из Python",
+            "minutes": 10
+          },
+          {
+            "id": "pytest-start",
+            "title": "Первый тест и запуск pytest",
+            "minutes": 5
+          },
+          {
+            "id": "pytest-assert",
+            "title": "Assert и точность ожиданий",
+            "minutes": 8
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Requests: HTTP из Python"
+          },
           {
             "type": "p",
             "text": "requests отправляет HTTP-запрос и возвращает Response. Примеры API используют публичный учебный JSONPlaceholder: чтение доступно по сети, операции изменения лишь имитируются. В рабочем проекте адреса и ожидания берутся из контракта своего API."
@@ -4697,26 +5020,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "При проверке ожидаемого 404 сначала сравнивается status_code: raise_for_status() остановил бы тест раньше проверки тела. json() не подтверждает правильность ответа, а только разбирает его формат."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Requests: quickstart",
-            "url": "https://requests.readthedocs.io/en/latest/user/quickstart/"
           },
           {
-            "title": "Requests: advanced usage",
-            "url": "https://requests.readthedocs.io/en/latest/user/advanced/"
-          }
-        ],
-        "category": "HTTP и Requests"
-      },
-      {
-        "id": "pytest-start",
-        "title": "Первый тест и запуск pytest",
-        "minutes": 5,
-        "summary": "Тест — подготовка, действие и проверка ожидания.",
-        "blocks": [
+            "type": "heading",
+            "text": "Первый тест и запуск pytest"
+          },
           {
             "type": "p",
             "text": "pytest автоматически собирает функции test_* из файлов test_*.py и *_test.py. Отдельный тест проверяет понятное правило, а его название описывает ожидаемое поведение."
@@ -4744,26 +5052,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Зелёный прогон доказывает только выполненные ожидания. Тест без assert может пройти после успешного действия, ничего не проверив в его результате."
-          }
-        ],
-        "resources": [
-          {
-            "title": "pytest: getting-started",
-            "url": "https://docs.pytest.org/en/stable/getting-started.html"
           },
           {
-            "title": "pytest: how-to/usage",
-            "url": "https://docs.pytest.org/en/stable/how-to/usage.html"
-          }
-        ],
-        "category": "Pytest и API-тесты"
-      },
-      {
-        "id": "pytest-assert",
-        "title": "Assert и точность ожиданий",
-        "minutes": 8,
-        "summary": "Проверяется конкретное значение, тип или ожидаемая ошибка.",
-        "blocks": [
+            "type": "heading",
+            "text": "Assert и точность ожиданий"
+          },
           {
             "type": "p",
             "text": "assert падает, если условие ложно. Ожидание берётся из требования, а не вычисляется тем же алгоритмом, что проверяемый код. Несколько связанных assert допустимы в одном сценарии."
@@ -4792,18 +5085,60 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Requests: quickstart",
+            "url": "https://requests.readthedocs.io/en/latest/user/quickstart/"
+          },
+          {
+            "title": "Requests: advanced usage",
+            "url": "https://requests.readthedocs.io/en/latest/user/advanced/"
+          },
+          {
+            "title": "pytest: getting-started",
+            "url": "https://docs.pytest.org/en/stable/getting-started.html"
+          },
+          {
+            "title": "pytest: how-to/usage",
+            "url": "https://docs.pytest.org/en/stable/how-to/usage.html"
+          },
+          {
             "title": "pytest: how-to/assert",
             "url": "https://docs.pytest.org/en/stable/how-to/assert.html"
           }
-        ],
-        "category": "Pytest и API-тесты"
+        ]
       },
       {
-        "id": "pytest-parametrize",
-        "title": "Параметризация",
-        "minutes": 5,
-        "summary": "Один сценарий — несколько наборов входных данных.",
+        "id": "python-chapter-test-data-and-fixtures",
+        "title": "Данные, фикстуры и набор API-тестов",
+        "minutes": 31,
+        "summary": "Как запускать независимые API-проверки на разных данных с общей подготовкой и очисткой.",
+        "category": "Pytest и API-тесты",
+        "topics": [
+          {
+            "id": "pytest-parametrize",
+            "title": "Параметризация",
+            "minutes": 5
+          },
+          {
+            "id": "pytest-fixtures",
+            "title": "Фикстуры и очистка",
+            "minutes": 8
+          },
+          {
+            "id": "pytest-builtins",
+            "title": "Встроенные фикстуры и маркеры",
+            "minutes": 8
+          },
+          {
+            "id": "pytest-api",
+            "title": "API-тест: статус и тело",
+            "minutes": 10
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Параметризация"
+          },
           {
             "type": "p",
             "text": "pytest.mark.parametrize запускает тест отдельно для каждой строки данных. Это удобно для классов эквивалентности и границ: логика проверки не копируется, а провалившийся набор виден в отчёте."
@@ -4825,22 +5160,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Параметризация подходит для одинаковых действий с разными данными. Сценарии с разной последовательностью действий удобнее разделять. Все целые числа между границами обычно не нужны: достаточно значимых представителей."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "pytest: how-to/parametrize",
-            "url": "https://docs.pytest.org/en/stable/how-to/parametrize.html"
-          }
-        ],
-        "category": "Pytest и API-тесты"
-      },
-      {
-        "id": "pytest-fixtures",
-        "title": "Фикстуры и очистка",
-        "minutes": 8,
-        "summary": "Общая подготовка с понятным временем жизни.",
-        "blocks": [
+            "type": "heading",
+            "text": "Фикстуры и очистка"
+          },
           {
             "type": "p",
             "text": "Фикстура — функция с @pytest.fixture, которая предоставляет тесту данные или ресурс. Тест запрашивает её по имени аргумента. Общие фикстуры размещаются в conftest.py."
@@ -4863,26 +5187,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Изменяемые данные обычно создаются отдельно для теста: тогда порядок запуска не влияет на результат. Если ошибка произошла до yield, код после него не выполнится; уже созданный внешний ресурс требует защищённой очистки."
-          }
-        ],
-        "resources": [
-          {
-            "title": "pytest: how-to/fixtures",
-            "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html"
           },
           {
-            "title": "pytest: reference/fixtures",
-            "url": "https://docs.pytest.org/en/stable/reference/fixtures.html"
-          }
-        ],
-        "category": "Pytest и API-тесты"
-      },
-      {
-        "id": "pytest-builtins",
-        "title": "Встроенные фикстуры и маркеры",
-        "minutes": 8,
-        "summary": "Изоляция файлов, окружения и логов.",
-        "blocks": [
+            "type": "heading",
+            "text": "Встроенные фикстуры и маркеры"
+          },
           {
             "type": "p",
             "text": "pytest уже содержит инструменты для типовой подготовки. Они уменьшают количество ручной очистки и позволяют тестировать код без изменения настроек всей системы."
@@ -4913,34 +5222,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Собственные маркеры регистрируются в конфигурации. --strict-markers превращает опечатку в ошибку, чтобы нужный тест не выпал из выбранного набора незаметно."
-          }
-        ],
-        "resources": [
-          {
-            "title": "pytest: how-to/tmp_path",
-            "url": "https://docs.pytest.org/en/stable/how-to/tmp_path.html"
           },
           {
-            "title": "pytest: how-to/monkeypatch",
-            "url": "https://docs.pytest.org/en/stable/how-to/monkeypatch.html"
+            "type": "heading",
+            "text": "API-тест: статус и тело"
           },
-          {
-            "title": "pytest: how-to/logging",
-            "url": "https://docs.pytest.org/en/stable/how-to/logging.html"
-          },
-          {
-            "title": "pytest: how-to/mark",
-            "url": "https://docs.pytest.org/en/stable/how-to/mark.html"
-          }
-        ],
-        "category": "Pytest и API-тесты"
-      },
-      {
-        "id": "pytest-api",
-        "title": "API-тест: статус и тело",
-        "minutes": 10,
-        "summary": "Проверка успешного ответа и отсутствующего объекта.",
-        "blocks": [
           {
             "type": "p",
             "text": "API-тест выполняет запрос и сопоставляет ответ с контрактом. Статус — только одна часть проверки: тело должно содержать нужные данные, а ошибка — согласованный формат."
@@ -4967,6 +5253,34 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "pytest: how-to/parametrize",
+            "url": "https://docs.pytest.org/en/stable/how-to/parametrize.html"
+          },
+          {
+            "title": "pytest: how-to/fixtures",
+            "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+          },
+          {
+            "title": "pytest: reference/fixtures",
+            "url": "https://docs.pytest.org/en/stable/reference/fixtures.html"
+          },
+          {
+            "title": "pytest: how-to/tmp_path",
+            "url": "https://docs.pytest.org/en/stable/how-to/tmp_path.html"
+          },
+          {
+            "title": "pytest: how-to/monkeypatch",
+            "url": "https://docs.pytest.org/en/stable/how-to/monkeypatch.html"
+          },
+          {
+            "title": "pytest: how-to/logging",
+            "url": "https://docs.pytest.org/en/stable/how-to/logging.html"
+          },
+          {
+            "title": "pytest: how-to/mark",
+            "url": "https://docs.pytest.org/en/stable/how-to/mark.html"
+          },
+          {
             "title": "JSONPlaceholder: учебный API",
             "url": "https://jsonplaceholder.typicode.com/guide/"
           },
@@ -4974,15 +5288,36 @@ const MODULES = [
             "title": "Requests: Response",
             "url": "https://requests.readthedocs.io/en/latest/api/#requests.Response"
           }
-        ],
-        "category": "Pytest и API-тесты"
+        ]
       },
       {
-        "id": "ui-first",
-        "title": "Первый UI-тест с Playwright",
-        "minutes": 10,
-        "summary": "Действие в браузере и проверка видимого результата.",
+        "id": "python-chapter-playwright-basics",
+        "title": "Playwright: действия и ожидания",
+        "minutes": 28,
+        "summary": "Как выполнить пользовательский сценарий в браузере и проверить его видимый результат.",
+        "category": "UI-тесты",
+        "topics": [
+          {
+            "id": "ui-first",
+            "title": "Первый UI-тест с Playwright",
+            "minutes": 10
+          },
+          {
+            "id": "ui-locators",
+            "title": "Локаторы и ожидания",
+            "minutes": 8
+          },
+          {
+            "id": "ui-elements",
+            "title": "Формы и события браузера",
+            "minutes": 10
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Первый UI-тест с Playwright"
+          },
           {
             "type": "p",
             "text": "Playwright управляет браузером, а pytest-playwright предоставляет фикстуру page. Для каждого теста создаётся отдельный контекст с собственными cookies и хранилищем. Пример использует локальный HTML и не зависит от внешнего сайта."
@@ -5011,26 +5346,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Реальный сценарий начинается с page.goto и проверяет приложение вместе с его взаимодействиями. Этот локальный пример демонстрирует только механику UI-теста."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Playwright: intro",
-            "url": "https://playwright.dev/python/docs/intro"
           },
           {
-            "title": "Playwright: writing-tests",
-            "url": "https://playwright.dev/python/docs/writing-tests"
-          }
-        ],
-        "category": "Playwright"
-      },
-      {
-        "id": "ui-locators",
-        "title": "Локаторы и ожидания",
-        "minutes": 8,
-        "summary": "Устойчивый поиск элемента и ожидание состояния.",
-        "blocks": [
+            "type": "heading",
+            "text": "Локаторы и ожидания"
+          },
           {
             "type": "p",
             "text": "Локатор описывает, как найти элемент. Хороший локатор сохраняет смысл после небольшого изменения вёрстки. Playwright повторно находит элемент при действии и автоматически ждёт его готовности."
@@ -5057,30 +5377,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Фиксированный sleep всегда ждёт одинаковое время и остаётся нестабильным при медленной загрузке. Ожидание конкретного состояния завершается сразу после его появления. Длинные XPath и nth(3) привязаны к расположению элементов; уникальный смысловой локатор надёжнее."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Playwright: locators",
-            "url": "https://playwright.dev/python/docs/locators"
           },
           {
-            "title": "Playwright: auto-waiting",
-            "url": "https://playwright.dev/python/docs/auto-waiting"
+            "type": "heading",
+            "text": "Формы и события браузера"
           },
-          {
-            "title": "Playwright: assertions",
-            "url": "https://playwright.dev/python/docs/assertions"
-          }
-        ],
-        "category": "Playwright"
-      },
-      {
-        "id": "ui-elements",
-        "title": "Формы и события браузера",
-        "minutes": 10,
-        "summary": "Частые действия без длинных сценариев.",
-        "blocks": [
           {
             "type": "p",
             "text": "Каждый тип элемента имеет своё действие. Для событий, которые возникают сразу после клика, ожидание регистрируется до действия — иначе событие можно пропустить."
@@ -5118,6 +5419,26 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Playwright: intro",
+            "url": "https://playwright.dev/python/docs/intro"
+          },
+          {
+            "title": "Playwright: writing-tests",
+            "url": "https://playwright.dev/python/docs/writing-tests"
+          },
+          {
+            "title": "Playwright: locators",
+            "url": "https://playwright.dev/python/docs/locators"
+          },
+          {
+            "title": "Playwright: auto-waiting",
+            "url": "https://playwright.dev/python/docs/auto-waiting"
+          },
+          {
+            "title": "Playwright: assertions",
+            "url": "https://playwright.dev/python/docs/assertions"
+          },
+          {
             "title": "Playwright: input",
             "url": "https://playwright.dev/python/docs/input"
           },
@@ -5137,15 +5458,31 @@ const MODULES = [
             "title": "Playwright: downloads",
             "url": "https://playwright.dev/python/docs/downloads"
           }
-        ],
-        "category": "Playwright"
+        ]
       },
       {
-        "id": "ui-pom",
-        "title": "Page Object и изоляция",
-        "minutes": 8,
-        "summary": "Повторяемые действия страницы в одном месте.",
+        "id": "python-chapter-ui-maintenance",
+        "title": "Организация и диагностика UI-тестов",
+        "minutes": 13,
+        "summary": "Как поддерживать повторяющиеся сценарии и разбирать причины нестабильных проверок.",
+        "category": "UI-тесты",
+        "topics": [
+          {
+            "id": "ui-pom",
+            "title": "Page Object и изоляция",
+            "minutes": 8
+          },
+          {
+            "id": "ui-debug",
+            "title": "Разбор падений UI-тестов",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Page Object и изоляция"
+          },
           {
             "type": "p",
             "text": "Page Object хранит локаторы и действия страницы. Тест описывает сценарий и ожидаемый результат. Такой подход полезен, когда одна форма используется в нескольких проверках."
@@ -5167,30 +5504,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Избыточный Page Object может скрыть сценарий. Для одной короткой проверки прямые вызовы page остаются понятнее; общий слой появляется там, где уже есть повторение."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Playwright: pom",
-            "url": "https://playwright.dev/python/docs/pom"
           },
           {
-            "title": "Playwright: browser-contexts",
-            "url": "https://playwright.dev/python/docs/browser-contexts"
+            "type": "heading",
+            "text": "Разбор падений UI-тестов"
           },
-          {
-            "title": "Playwright: authentication",
-            "url": "https://playwright.dev/python/docs/authentication"
-          }
-        ],
-        "category": "Playwright"
-      },
-      {
-        "id": "ui-debug",
-        "title": "Разбор падений UI-тестов",
-        "minutes": 5,
-        "summary": "Доказательства важнее повторных запусков.",
-        "blocks": [
           {
             "type": "p",
             "text": "Flaky-тест иногда проходит и иногда падает при одинаковой проверяемой версии. Типовые причины — ожидание по времени, общие данные, нестабильный локатор или зависимость от внешнего сервиса."
@@ -5218,6 +5536,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Playwright: pom",
+            "url": "https://playwright.dev/python/docs/pom"
+          },
+          {
+            "title": "Playwright: browser-contexts",
+            "url": "https://playwright.dev/python/docs/browser-contexts"
+          },
+          {
+            "title": "Playwright: authentication",
+            "url": "https://playwright.dev/python/docs/authentication"
+          },
+          {
             "title": "Playwright: trace-viewer",
             "url": "https://playwright.dev/python/docs/trace-viewer"
           },
@@ -5233,14 +5563,21 @@ const MODULES = [
             "title": "Playwright: test-runners",
             "url": "https://playwright.dev/python/docs/test-runners"
           }
-        ],
-        "category": "Playwright"
+        ]
       },
       {
-        "id": "ui-selenium",
+        "id": "python-chapter-selenium",
         "title": "Selenium и явные ожидания",
         "minutes": 10,
-        "summary": "Альтернатива Playwright для работы через WebDriver.",
+        "summary": "Основные действия WebDriver и ожидание состояния элемента в Selenium.",
+        "category": "UI-тесты",
+        "topics": [
+          {
+            "id": "ui-selenium",
+            "title": "Selenium и явные ожидания",
+            "minutes": 10
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -5283,8 +5620,7 @@ const MODULES = [
             "title": "Selenium Manager",
             "url": "https://www.selenium.dev/documentation/selenium_manager/"
           }
-        ],
-        "category": "Selenium"
+        ]
       }
     ]
   },
@@ -5305,11 +5641,28 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "ci-basics",
-        "title": "Что QA нужно знать о CI/CD",
-        "minutes": 5,
-        "summary": "Тесты запускаются автоматически для конкретной версии кода.",
+        "id": "cicd-chapter-first-workflow",
+        "title": "CI/CD и первый workflow",
+        "minutes": 15,
+        "summary": "Как изменение в репозитории запускает проверку в подготовленном окружении GitHub Actions.",
+        "category": "Запуск тестов",
+        "topics": [
+          {
+            "id": "ci-basics",
+            "title": "Что QA нужно знать о CI/CD",
+            "minutes": 5
+          },
+          {
+            "id": "ci-workflow",
+            "title": "Минимальный GitHub Actions workflow",
+            "minutes": 10
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Что QA нужно знать о CI/CD"
+          },
           {
             "type": "p",
             "text": "CI проверяет изменения при интеграции в репозиторий. CD организует доставку проверенной версии: deployment может быть автоматическим или требовать отдельного решения команды."
@@ -5333,22 +5686,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "QA должен уметь найти запуск нужного коммита, прочитать упавший шаг и открыть его материалы. Зелёный pipeline означает успешность настроенных проверок, поэтому состав набора тестов важнее цвета индикатора."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "GitHub Actions: основы",
-            "url": "https://docs.github.com/en/actions/get-started/understand-github-actions"
-          }
-        ],
-        "category": "Основы CI/CD"
-      },
-      {
-        "id": "ci-workflow",
-        "title": "Минимальный GitHub Actions workflow",
-        "minutes": 10,
-        "summary": "Установка среды, запуск pytest и сохранение отчёта.",
-        "blocks": [
+            "type": "heading",
+            "text": "Минимальный GitHub Actions workflow"
+          },
           {
             "type": "p",
             "text": "GitHub Actions читает YAML-файлы из .github/workflows/. Этот workflow предполагает, что requirements.txt содержит pytest, requests и pytest-playwright, а тесты уже работают из корня репозитория."
@@ -5375,6 +5717,10 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "GitHub Actions: основы",
+            "url": "https://docs.github.com/en/actions/get-started/understand-github-actions"
+          },
+          {
             "title": "GitHub: Python CI",
             "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python"
           },
@@ -5382,14 +5728,21 @@ const MODULES = [
             "title": "Playwright: ci",
             "url": "https://playwright.dev/python/docs/ci"
           }
-        ],
-        "category": "GitHub Actions"
+        ]
       },
       {
-        "id": "ci-secrets",
-        "title": "Переменные, секреты и matrix",
+        "id": "cicd-chapter-configuration",
+        "title": "Настройки запуска и секреты",
         "minutes": 8,
-        "summary": "Настройки отделены от кода и соответствуют стенду.",
+        "summary": "Как передавать тестам параметры стенда и проверять поддерживаемые конфигурации.",
+        "category": "Запуск тестов",
+        "topics": [
+          {
+            "id": "ci-secrets",
+            "title": "Переменные, секреты и matrix",
+            "minutes": 8
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -5425,15 +5778,31 @@ const MODULES = [
             "title": "GitHub: matrix",
             "url": "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs"
           }
-        ],
-        "category": "GitHub Actions"
+        ]
       },
       {
-        "id": "ci-reports",
-        "title": "Результаты pytest и отчёты",
-        "minutes": 5,
-        "summary": "Что означает завершение процесса и где искать детали.",
+        "id": "cicd-chapter-results-and-debugging",
+        "title": "Отчёты и причины падений",
+        "minutes": 10,
+        "summary": "Как связать неуспешный запуск с конкретным тестом и отличить дефект от проблемы среды.",
+        "category": "Результаты и диагностика",
+        "topics": [
+          {
+            "id": "ci-reports",
+            "title": "Результаты pytest и отчёты",
+            "minutes": 5
+          },
+          {
+            "id": "ci-debug",
+            "title": "Как разбирать красный pipeline",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Результаты pytest и отчёты"
+          },
           {
             "type": "p",
             "text": "Результат прогона связывается с коммитом, окружением и временем запуска. JUnit XML подходит для CI-систем; Allure добавляет удобную навигацию по тестам и вложениям."
@@ -5461,34 +5830,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Отчёт полезен, когда из него понятны ожидание, фактический результат и причина сбоя. Количество тестов само по себе не показывает покрытие важных рисков."
-          }
-        ],
-        "resources": [
-          {
-            "title": "pytest: reference/exit-codes",
-            "url": "https://docs.pytest.org/en/stable/reference/exit-codes.html"
           },
           {
-            "title": "pytest: how-to/output",
-            "url": "https://docs.pytest.org/en/stable/how-to/output.html"
+            "type": "heading",
+            "text": "Как разбирать красный pipeline"
           },
-          {
-            "title": "Allure: pytest",
-            "url": "https://allurereport.org/docs/pytest/"
-          },
-          {
-            "title": "Allure Report 2: установка",
-            "url": "https://allurereport.org/docs/v2/install/"
-          }
-        ],
-        "category": "Отчёты и диагностика"
-      },
-      {
-        "id": "ci-debug",
-        "title": "Как разбирать красный pipeline",
-        "minutes": 5,
-        "summary": "Сначала упавший шаг, затем причина.",
-        "blocks": [
           {
             "type": "p",
             "text": "Красный запуск означает, что один из шагов завершился неуспешно. Это может быть дефект продукта, ошибка теста или проблема среды. Повторный запуск без чтения первого сбоя редко помогает разобраться."
@@ -5517,17 +5863,40 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "pytest: reference/exit-codes",
+            "url": "https://docs.pytest.org/en/stable/reference/exit-codes.html"
+          },
+          {
+            "title": "pytest: how-to/output",
+            "url": "https://docs.pytest.org/en/stable/how-to/output.html"
+          },
+          {
+            "title": "Allure: pytest",
+            "url": "https://allurereport.org/docs/pytest/"
+          },
+          {
+            "title": "Allure Report 2: установка",
+            "url": "https://allurereport.org/docs/v2/install/"
+          },
+          {
             "title": "GitHub: логи workflow",
             "url": "https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs"
           }
-        ],
-        "category": "Отчёты и диагностика"
+        ]
       },
       {
-        "id": "ci-docker",
+        "id": "cicd-chapter-docker",
         "title": "Docker: необязательный минимум",
         "minutes": 8,
-        "summary": "Одинаковая среда для запуска тестов.",
+        "summary": "Как контейнер задаёт воспроизводимую среду для запуска тестов.",
+        "category": "Дополнительно",
+        "topics": [
+          {
+            "id": "ci-docker",
+            "title": "Docker: необязательный минимум",
+            "minutes": 8
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -5572,8 +5941,7 @@ const MODULES = [
             "title": "Playwright: docker",
             "url": "https://playwright.dev/python/docs/docker"
           }
-        ],
-        "category": "Контейнеры"
+        ]
       }
     ]
   },
@@ -5594,11 +5962,33 @@ const MODULES = [
     ],
     "lessons": [
       {
-        "id": "platforms-architecture",
-        "title": "Web, native и hybrid",
-        "minutes": 5,
-        "summary": "Тип приложения определяет дополнительные риски.",
+        "id": "platforms-chapter-environment-and-installation",
+        "title": "Среда приложения и установка",
+        "minutes": 15,
+        "summary": "Какие проверки определяются типом приложения и его взаимодействием с операционной системой.",
+        "category": "Приложение и ОС",
+        "topics": [
+          {
+            "id": "platforms-architecture",
+            "title": "Web, native и hybrid",
+            "minutes": 5
+          },
+          {
+            "id": "platforms-installation",
+            "title": "Установка и обновление",
+            "minutes": 5
+          },
+          {
+            "id": "platforms-desktop",
+            "title": "Desktop: файлы, окна и процессы",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Web, native и hybrid"
+          },
           {
             "type": "p",
             "text": "Общий сценарий может быть одинаковым: вход, поиск, заказ. Отличается среда выполнения и доступ к возможностям устройства. Поэтому готовый Web-чеклист дополняется проверками установки и поведения ОС."
@@ -5615,7 +6005,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Что добавляется к функциональным проверкам"
+            "text": "Что добавляется к функциональным проверкам",
+            "level": 4
           },
           {
             "type": "list",
@@ -5629,26 +6020,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Окружение бага включает версию приложения, сборку, ОС и модель устройства. Одного названия «Android» недостаточно для воспроизведения."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Android Developers: жизненный цикл Activity",
-            "url": "https://developer.android.com/guide/components/activities/activity-lifecycle"
           },
           {
-            "title": "Apple: жизненный цикл приложения",
-            "url": "https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle"
-          }
-        ],
-        "category": "Платформы и окружение"
-      },
-      {
-        "id": "platforms-installation",
-        "title": "Установка и обновление",
-        "minutes": 5,
-        "summary": "Новая версия должна запускаться и сохранять нужные данные.",
-        "blocks": [
+            "type": "heading",
+            "text": "Установка и обновление"
+          },
           {
             "type": "p",
             "text": "Чистая установка и обновление проверяют разные риски. При обновлении новая версия получает данные предыдущей: ошибки миграции могут проявиться только на таком пути."
@@ -5666,7 +6042,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Минимальный сценарий обновления"
+            "text": "Минимальный сценарий обновления",
+            "level": 4
           },
           {
             "type": "list",
@@ -5679,22 +6056,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Удаление приложения не обязано удалять данные на сервере. Откат на старую версию также не считается обязательным поведением без соответствующего требования."
-          }
-        ],
-        "resources": [
+          },
           {
-            "title": "Android Developers: Android Debug Bridge",
-            "url": "https://developer.android.com/tools/adb"
-          }
-        ],
-        "category": "Платформы и окружение"
-      },
-      {
-        "id": "platforms-desktop",
-        "title": "Desktop: файлы, окна и процессы",
-        "minutes": 5,
-        "summary": "Главные особенности установленной программы.",
-        "blocks": [
+            "type": "heading",
+            "text": "Desktop: файлы, окна и процессы"
+          },
           {
             "type": "p",
             "text": "Desktop-приложение работает с файлами и процессами ОС. Ошибка может зависеть от прав пользователя или выбранного пути, даже если основной сценарий проходит на машине разработчика."
@@ -5712,7 +6078,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Пример проверки сохранения"
+            "text": "Пример проверки сохранения",
+            "level": 4
           },
           {
             "type": "list",
@@ -5729,6 +6096,18 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Android Developers: жизненный цикл Activity",
+            "url": "https://developer.android.com/guide/components/activities/activity-lifecycle"
+          },
+          {
+            "title": "Apple: жизненный цикл приложения",
+            "url": "https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle"
+          },
+          {
+            "title": "Android Developers: Android Debug Bridge",
+            "url": "https://developer.android.com/tools/adb"
+          },
+          {
             "title": "Microsoft: Get-Process",
             "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process"
           },
@@ -5744,15 +6123,31 @@ const MODULES = [
             "title": "Apple: поиск в Console",
             "url": "https://support.apple.com/guide/console/find-log-messages-and-activities-cnslbf30b61a/mac"
           }
-        ],
-        "category": "Платформы и окружение"
+        ]
       },
       {
-        "id": "platforms-lifecycle",
-        "title": "Фон, возврат и завершение",
-        "minutes": 5,
-        "summary": "Что происходит с незавершённым действием.",
+        "id": "platforms-chapter-state-and-navigation",
+        "title": "Состояние приложения и навигация",
+        "minutes": 10,
+        "summary": "Как приложение сохраняет пользовательский сценарий при переходах и системных прерываниях.",
+        "category": "Поведение приложения",
+        "topics": [
+          {
+            "id": "platforms-lifecycle",
+            "title": "Фон, возврат и завершение",
+            "minutes": 5
+          },
+          {
+            "id": "platforms-navigation",
+            "title": "Навигация и ввод",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Фон, возврат и завершение"
+          },
           {
             "type": "p",
             "text": "Мобильная ОС может приостановить приложение или завершить его процесс в фоне. Возврат пользователя не всегда означает продолжение того же процесса: приложение должно восстановить предусмотренное состояние."
@@ -5770,7 +6165,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Сценарий с риском потери данных"
+            "text": "Сценарий с риском потери данных",
+            "level": 4
           },
           {
             "type": "list",
@@ -5783,26 +6179,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Нужно различать сворачивание, смахивание из списка приложений и принудительную остановку: ОС может обрабатывать их по-разному. Конкретный способ прерывания записывается в шаги бага."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Android Developers: жизненный цикл Activity",
-            "url": "https://developer.android.com/guide/components/activities/activity-lifecycle"
           },
           {
-            "title": "Apple: жизненный цикл приложения",
-            "url": "https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle"
-          }
-        ],
-        "category": "Жизненный цикл и интерфейс"
-      },
-      {
-        "id": "platforms-navigation",
-        "title": "Навигация и ввод",
-        "minutes": 5,
-        "summary": "Экран остаётся доступным при смене способа взаимодействия.",
-        "blocks": [
+            "type": "heading",
+            "text": "Навигация и ввод"
+          },
           {
             "type": "p",
             "text": "Проверки навигации показывают, может ли пользователь закончить сценарий и вернуться назад без потери контекста. На мобильном устройстве часть экрана часто занята клавиатурой или системными панелями."
@@ -5820,7 +6201,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Пример deep link"
+            "text": "Пример deep link",
+            "level": 4
           },
           {
             "type": "p",
@@ -5833,6 +6215,14 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Android Developers: жизненный цикл Activity",
+            "url": "https://developer.android.com/guide/components/activities/activity-lifecycle"
+          },
+          {
+            "title": "Apple: жизненный цикл приложения",
+            "url": "https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle"
+          },
+          {
             "title": "Android: проверка App Links",
             "url": "https://developer.android.com/training/app-links/test-applinks"
           },
@@ -5844,15 +6234,31 @@ const MODULES = [
             "title": "Apple: диагностика Universal Links",
             "url": "https://developer.apple.com/documentation/technotes/tn3155-debugging-universal-links"
           }
-        ],
-        "category": "Жизненный цикл и интерфейс"
+        ]
       },
       {
-        "id": "platforms-permissions",
-        "title": "Разрешения ОС",
-        "minutes": 5,
-        "summary": "Функция должна учитывать отказ и отзыв доступа.",
+        "id": "platforms-chapter-permissions-and-network",
+        "title": "Разрешения и недоступная сеть",
+        "minutes": 10,
+        "summary": "Как приложение продолжает работу при ограниченном доступе к возможностям устройства и серверам.",
+        "category": "Поведение приложения",
+        "topics": [
+          {
+            "id": "platforms-permissions",
+            "title": "Разрешения ОС",
+            "minutes": 5
+          },
+          {
+            "id": "platforms-network",
+            "title": "Offline и синхронизация",
+            "minutes": 5
+          }
+        ],
         "blocks": [
+          {
+            "type": "heading",
+            "text": "Разрешения ОС"
+          },
           {
             "type": "p",
             "text": "Разрешение ОС даёт приложению доступ к защищённой возможности устройства. Пользователь может отказаться или позже изменить решение в настройках. Тестируется не только успешное предоставление доступа."
@@ -5870,7 +6276,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Пример: фотография профиля"
+            "text": "Пример: фотография профиля",
+            "level": 4
           },
           {
             "type": "list",
@@ -5883,26 +6290,11 @@ const MODULES = [
           {
             "type": "p",
             "text": "Разрешение на уведомления и доставка push — разные проверки. Даже с разрешением сообщение может не прийти из-за настроек системы, сети или серверной отправки."
-          }
-        ],
-        "resources": [
-          {
-            "title": "Android: запрос разрешений во время выполнения",
-            "url": "https://developer.android.com/training/permissions/requesting"
           },
           {
-            "title": "Android Developers: Android Debug Bridge",
-            "url": "https://developer.android.com/tools/adb"
-          }
-        ],
-        "category": "Разрешения и сеть"
-      },
-      {
-        "id": "platforms-network",
-        "title": "Offline и синхронизация",
-        "minutes": 5,
-        "summary": "Сбой сети не должен терять данные или дублировать действия.",
-        "blocks": [
+            "type": "heading",
+            "text": "Offline и синхронизация"
+          },
           {
             "type": "p",
             "text": "Мобильное соединение меняется во время работы. Ошибки чаще возникают при переходе между состояниями, чем при полностью отключённой сети с самого начала."
@@ -5920,7 +6312,8 @@ const MODULES = [
           },
           {
             "type": "heading",
-            "text": "Пример повторной отправки"
+            "text": "Пример повторной отправки",
+            "level": 4
           },
           {
             "type": "p",
@@ -5933,17 +6326,32 @@ const MODULES = [
         ],
         "resources": [
           {
+            "title": "Android: запрос разрешений во время выполнения",
+            "url": "https://developer.android.com/training/permissions/requesting"
+          },
+          {
+            "title": "Android Developers: Android Debug Bridge",
+            "url": "https://developer.android.com/tools/adb"
+          },
+          {
             "title": "Android: тестирование с управляемыми зависимостями",
             "url": "https://developer.android.com/training/testing/fundamentals/test-doubles"
           }
-        ],
-        "category": "Разрешения и сеть"
+        ]
       },
       {
-        "id": "platforms-adb",
-        "title": "ADB и Logcat",
+        "id": "platforms-chapter-android-diagnostics",
+        "title": "Диагностика Android через ADB",
         "minutes": 8,
-        "summary": "Установка Android-сборки и сбор доказательств.",
+        "summary": "Как установить Android-сборку и собрать сведения для воспроизведения ошибки.",
+        "category": "Диагностика и качество",
+        "topics": [
+          {
+            "id": "platforms-adb",
+            "title": "ADB и Logcat",
+            "minutes": 8
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -5980,14 +6388,21 @@ const MODULES = [
             "title": "Android Developers: Logcat",
             "url": "https://developer.android.com/tools/logcat"
           }
-        ],
-        "category": "Диагностика и качество"
+        ]
       },
       {
-        "id": "platforms-nonfunctional",
-        "title": "Совместимость и удобство",
+        "id": "platforms-chapter-quality",
+        "title": "Совместимость и качество работы",
         "minutes": 5,
-        "summary": "Оценка качества вне отдельных функций.",
+        "summary": "Как оценить удобство и устойчивость приложения на поддерживаемых устройствах.",
+        "category": "Диагностика и качество",
+        "topics": [
+          {
+            "id": "platforms-nonfunctional",
+            "title": "Совместимость и удобство",
+            "minutes": 5
+          }
+        ],
         "blocks": [
           {
             "type": "p",
@@ -6026,8 +6441,7 @@ const MODULES = [
             "title": "Apple: жизненный цикл приложения",
             "url": "https://developer.apple.com/documentation/uikit/managing-your-app-s-life-cycle"
           }
-        ],
-        "category": "Диагностика и качество"
+        ]
       }
     ]
   }
@@ -6079,24 +6493,33 @@ const MODULE_ACCENTS={"foundations":"#d4f55a","documentation":"#85baff","web":"#
 const icon = n => `<svg class="icon" style="--icon-color:${ICON_PALETTE[n]||'#8fbdff'}" viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[n] || ICONS.book}"/></svg>`;
 const inline = text => esc(text).replace(/`([^`\n]+)`/g,'<code class="inline-code">$1</code>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
 const ALL = MODULES.flatMap(m => m.lessons.map(l => ({...l,module:m})));
+const TOPICS = ALL.flatMap(l => l.topics);
+const topicIds = new Set(TOPICS.map(t => t.id));
+const chapterByTopic = new Map(ALL.flatMap(l => l.topics.map(t => [t.id,l.id])));
+function chapterId(id){return validIds.has(id)?id:chapterByTopic.get(id)||null;}
+function completedTopics(chapter){return chapter.topics.filter(t=>state.completedTopics.includes(t.id)).length;}
+function partialProgress(chapter){const n=completedTopics(chapter);return n>0&&n<chapter.topics.length?' · Тем изучено: '+n+' из '+chapter.topics.length:'';}
 const PROJECT_STEPS = [...SOURCE_TEXT.matchAll(/^# ЭТАП (\d+)\. (.+)\r?\n([\s\S]*?)(?=^# ЭТАП |^# ЧТО У ТЕБЯ|$(?![\s\S]))/gm)].map(m => ({id:'project-'+m[1],number:Number(m[1]),title:m[2].trim(),body:m[3].trim()}));
 const KEY = 'qa-path-notebook-v2';
 
 const moduleStyle=m=>'--accent:'+(MODULE_ACCENTS[m.id]||'#85baff');
 const hours=minutes=>new Intl.NumberFormat('ru-RU',{maximumFractionDigits:1}).format(minutes/60);
 function duration(minutes){const h=Math.floor(minutes/60),min=minutes%60;return h?(h+' ч'+(min?' '+min+' мин':'')):(min+' мин');}
-function studyTime(module){const lessons=module?module.lessons:ALL;return {total:lessons.reduce((n,l)=>n+l.minutes,0),done:lessons.reduce((n,l)=>n+(state.done.includes(l.id)?l.minutes:0),0)};}
+function studyTime(module){const topics=(module?module.lessons:ALL).flatMap(l=>l.topics);return {total:topics.reduce((n,t)=>n+t.minutes,0),done:topics.reduce((n,t)=>n+(state.completedTopics.includes(t.id)?t.minutes:0),0)};}
 function moduleGroups(module){const groups=[];for(const lesson of module.lessons){const name=lesson.category||module.title;let group=groups.find(g=>g.name===name);if(!group){group={name,lessons:[]};groups.push(group);}group.lessons.push(lesson);}return groups;}
 function rememberChapter(id,syncHash=false){if(applyingStorage||!validIds.has(id))return;if(state.last!==id){state.last=id;persist();}if(syncHash){const chapter=ALL.find(l=>l.id===id);const hash='#'+chapter.module.id+'/'+id;if(location.hash!==hash)history.replaceState(null,'',hash);}}
 
 const validIds = new Set(ALL.map(l => l.id));
 const projectIds = new Set(PROJECT_STEPS.map(s => s.id));
-const emptyState = () => ({version:2,done:[],notes:{},projectDone:[],last:null});
+const emptyState = () => ({version:3,done:[],completedTopics:[],notes:{},projectDone:[],last:null});
 const chapterWord = n => n%10===1 && n%100!==11 ? 'глава' : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 'главы' : 'глав';
 function sanitize(v) {
-  if(!v || ![1,2].includes(v.version) || !Array.isArray(v.done) || !v.notes || typeof v.notes!=='object' || Array.isArray(v.notes)) throw Error('Неверный формат');
-  return {version:2,done:[...new Set(v.done.filter(x=>validIds.has(x)))],notes:Object.fromEntries(Object.entries(v.notes).filter(([k,t])=>validIds.has(k)&&typeof t==='string').map(([k,t])=>[k,t.slice(0,20000)])),projectDone:[...new Set((Array.isArray(v.projectDone)?v.projectDone:[]).filter(x=>projectIds.has(x)))],last:validIds.has(v.last)?v.last:null};
+  if(!v || ![1,2,3].includes(v.version) || !Array.isArray(v.done) || !v.notes || typeof v.notes!=='object' || Array.isArray(v.notes)) throw Error('Неверный формат');
+  const completed=new Set((v.version<3?v.done:Array.isArray(v.completedTopics)?v.completedTopics:[]).filter(id=>topicIds.has(id)));
+  if(v.version===3)for(const id of v.done){const chapter=ALL.find(l=>l.id===id);if(chapter)chapter.topics.forEach(t=>completed.add(t.id));}
+  return {version:3,completedTopics:[...completed],done:ALL.filter(l=>l.topics.every(t=>completed.has(t.id))).map(l=>l.id),notes:Object.fromEntries(Object.entries(v.notes).filter(([k,t])=>(validIds.has(k)||topicIds.has(k))&&typeof t==='string').map(([k,t])=>[k,t.slice(0,20000)])),projectDone:[...new Set((Array.isArray(v.projectDone)?v.projectDone:[]).filter(x=>projectIds.has(x)))],last:chapterId(v.last)};
 }
+function mergeProgress(current,incoming){const notes={...current.notes};for(const [id,text] of Object.entries(incoming.notes))if(text.trim()||!(id in notes))notes[id]=text;return sanitize({version:3,done:[...current.done,...incoming.done],completedTopics:[...current.completedTopics,...incoming.completedTopics],notes,projectDone:[...current.projectDone,...incoming.projectDone],last:incoming.last||current.last});}
 let state=emptyState(), storageOK=true, filter='all', currentView='overview', toastTimer, applyingStorage=false;
 try { const raw=localStorage.getItem(KEY); if(raw)state=sanitize(JSON.parse(raw)); } catch { storageOK=false; }
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));storageOK=true;}catch{storageOK=false;}renderStorage();}
@@ -6332,7 +6755,7 @@ function highlightCode(source,language='text'){
 
 function codeBlock(code,language='Пример',caption=''){return `<div class="code-wrap"><div class="code-top"><span>${esc(language)}</span><button class="code-copy" data-copy-code aria-label="Копировать код">Копировать</button></div><pre><code class="language-${esc(String(language).toLowerCase().replace(/[^a-z]/g,''))}">${highlightCode(code,language)}</code></pre></div>${caption?`<p class="code-caption">${inline(caption)}</p>`:''}`;}
 function renderBlock(b){
-  if(b.type==='heading')return `<h3 class="content-heading">${esc(b.text)}</h3>`;
+  if(b.type==='heading'){const tag=b.level===4?'h4':'h3';return `<${tag} class="content-heading">${esc(b.text)}</${tag}>`;}
   if(b.type==='list')return `<ul class="content-list">${b.items.map(t=>`<li>${inline(t)}</li>`).join('')}</ul>`;
   if(b.type==='table')return `<div class="table-scroll" tabindex="0" aria-label="Таблица: ${esc(b.headers.join(', '))}"><table class="reference-table"><thead><tr>${b.headers.map(t=>`<th scope="col">${esc(t)}</th>`).join('')}</tr></thead><tbody>${b.rows.map(r=>`<tr>${r.map(t=>`<td>${inline(t)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   if(b.type==='code')return codeBlock(b.code,b.language,b.caption);
@@ -6349,7 +6772,7 @@ function syncCompletionButton(detail,title,checked,project=false){
   const button=detail.querySelector('.lesson-status'),label=completionLabel(title,checked,project);
   button.setAttribute('aria-pressed',String(checked));button.setAttribute('aria-label',label);button.setAttribute('title',label);
 }
-function lessonHTML(l,i,open){return `<details class="lesson ${state.done.includes(l.id)?'completed':''}" id="lesson-${l.id}" data-accordion ${open?'open':''}><summary>${completionButton(l.id,i+1,l.title)}<span><span class="lesson-title">${esc(l.title)}</span><small>${duration(l.minutes)} · ${l.blocks.filter(b=>b.type==='code').length?`Примеры кода: ${l.blocks.filter(b=>b.type==='code').length} · `:''}${l.blocks.some(b=>b.type==='table')?'таблицы и пояснения':'теория и разбор'}</small></span><span class="chevron">${icon('chevron')}</span></summary><div class="lesson-body"><p class="intro">${esc(l.summary)}</p>${l.blocks.map(renderBlock).join('')}${l.practice?`<div class="practice"><strong>ПРИМЕР ДЛЯ РАЗБОРА</strong>${inline(l.practice)}</div>`:''}${l.answer?`<details class="answer" data-accordion><summary>Показать разбор ${icon('chevron')}</summary><div class="answer-body"><p>${inline(l.answer)}</p></div></details>`:''}${l.resources?.length?`<h4>Дополнительные официальные материалы</h4><div class="resources">${l.resources.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a>`).join('')}</div>`:''}</div></details>`;}
+function lessonHTML(l,i,open){return `<details class="lesson ${state.done.includes(l.id)?'completed':''}" id="lesson-${l.id}" data-accordion ${open?'open':''}><summary>${completionButton(l.id,i+1,l.title)}<span><span class="lesson-title">${esc(l.title)}</span><small>${duration(l.minutes)} · ${l.blocks.filter(b=>b.type==='code').length?`Примеры кода: ${l.blocks.filter(b=>b.type==='code').length} · `:''}${l.blocks.some(b=>b.type==='table')?'таблицы и пояснения':'теория и разбор'}<span class="topic-progress">${partialProgress(l)}</span></small></span><span class="chevron">${icon('chevron')}</span></summary><div class="lesson-body"><p class="intro">${esc(l.summary)}</p>${l.blocks.map(renderBlock).join('')}${l.practice?`<div class="practice"><strong>ПРИМЕР ДЛЯ РАЗБОРА</strong>${inline(l.practice)}</div>`:''}${l.answer?`<details class="answer" data-accordion><summary>Показать разбор ${icon('chevron')}</summary><div class="answer-body"><p>${inline(l.answer)}</p></div></details>`:''}${l.resources?.length?`<h4>Дополнительные официальные материалы</h4><div class="resources">${l.resources.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a>`).join('')}</div>`:''}</div></details>`;}
 function renderModule(m,lesson){
   const active=m.lessons.find(l=>l.id===lesson),groups=moduleGroups(m),time=studyTime(m);
   if(active)rememberChapter(active.id,true);
@@ -6378,11 +6801,12 @@ function renderProject(){
 function resultButton(l){return `<button class="result-item" data-view="${l.module.id}" data-lesson="${l.id}">${icon(l.module.icon)}<span><strong>${esc(l.title)}</strong><small>${esc(l.module.title)}${state.done.includes(l.id)?' · Изучено':''}</small></span></button>`;}
 const searchable=ALL.map(l=>({l,text:[l.title,l.summary,l.module.title,...l.module.tags,...l.blocks.flatMap(b=>[b.text,b.title,b.code,b.caption,...(b.items||[]),...(b.headers||[]),...(b.rows||[]).flat()]),l.practice,l.answer].filter(Boolean).join(' ').toLocaleLowerCase('ru')}));
 function renderSearch(q){currentView='search';renderNav();const words=q.toLocaleLowerCase('ru').split(/\s+/);const found=searchable.filter(({text})=>words.every(w=>text.includes(w))).map(x=>x.l);$('#view').innerHTML=`<section class="view"><div class="page-heading"><div><h1>Поиск по конспекту</h1><p class="subtitle">«${esc(q)}» · найдено ${found.length}</p></div></div>${found.length?found.map(resultButton).join(''):`<div class="empty">${icon('search')}<h2>Ничего не найдено</h2><p>Поиск работает по названиям команд, терминов и инструментов.</p></div>`}</section>`;}
-function renderRoute(){const [id,lesson]=location.hash.slice(1).split('/');currentView=id||'overview';const m=MODULES.find(x=>x.id===currentView);$('#view').setAttribute('role',m?'tabpanel':'region');$('#view').removeAttribute('aria-labelledby');if(m){$('#view').setAttribute('aria-labelledby','tab-'+m.id);renderModule(m,m.lessons.some(l=>l.id===lesson)?lesson:null);}else if(currentView==='modules')renderModules();else if(currentView==='portfolio')renderProject();else if(currentView==='resume')renderResume();else{currentView='overview';renderOverview();}renderNav();renderStorage();if(!lesson)window.scrollTo({top:0,behavior:'instant'});}
+function renderRoute(){const [id,lesson]=location.hash.slice(1).split('/');currentView=id||'overview';const m=MODULES.find(x=>x.id===currentView);$('#view').setAttribute('role',m?'tabpanel':'region');$('#view').removeAttribute('aria-labelledby');if(m){$('#view').setAttribute('aria-labelledby','tab-'+m.id);renderModule(m,chapterId(lesson));}else if(currentView==='modules')renderModules();else if(currentView==='portfolio')renderProject();else if(currentView==='resume')renderResume();else{currentView='overview';renderOverview();}renderNav();renderStorage();if(!lesson)window.scrollTo({top:0,behavior:'instant'});}
 function updateProgress(id,checked){
   const chapter=ALL.find(l=>l.id===id);if(!chapter)return;
-  state.done=checked?[...new Set([...state.done,id])]:state.done.filter(x=>x!==id);rememberChapter(id);persist();renderNav();
-  const m=MODULES.find(x=>x.id===currentView);if(m){$('#module-count').textContent=`${count(m)} из ${m.lessons.length} глав`;$('#module-percent').textContent=percent(m)+'%';const time=studyTime(m);$('#module-time').textContent=duration(time.done)+' / '+duration(time.total);$('.module-progress .bar').setAttribute('aria-valuenow',percent(m));$('.module-progress .bar>span').style.width=percent(m)+'%';syncCompletionButton(document.getElementById('lesson-'+id),chapter.title,checked);}
+  const topics=new Set(state.completedTopics);chapter.topics.forEach(t=>checked?topics.add(t.id):topics.delete(t.id));
+  state=sanitize({...state,done:state.done.filter(x=>x!==id),completedTopics:[...topics]});rememberChapter(id);persist();renderNav();
+  const m=MODULES.find(x=>x.id===currentView);if(m){$('#module-count').textContent=`${count(m)} из ${m.lessons.length} глав`;$('#module-percent').textContent=percent(m)+'%';const time=studyTime(m);$('#module-time').textContent=duration(time.done)+' / '+duration(time.total);$('.module-progress .bar').setAttribute('aria-valuenow',percent(m));$('.module-progress .bar>span').style.width=percent(m)+'%';const detail=document.getElementById('lesson-'+id);syncCompletionButton(detail,chapter.title,checked);const partial=detail?.querySelector('.topic-progress');if(partial)partial.textContent=partialProgress(chapter);}
   toast(storageOK?'Отметка сохранена':'Отметка не сохранилась: резервная копия доступна в настройках');
 }
 function updateProject(id,checked){
@@ -6408,7 +6832,7 @@ document.addEventListener('click',async e=>{
   switch(b.dataset.action){case'settings':$('#settings-dialog').showModal();break;case'export':downloadBackup();break;case'import':$('#import-file').click();break;case'source':openSource();break;case'reset':$('#settings-dialog').close();$('#reset-dialog').showModal();break;case'confirm-reset':state=emptyState();persist();document.querySelectorAll('dialog[open]').forEach(d=>d.close());renderRoute();toast('Прогресс сброшен');break;}
 });
 $('#search').addEventListener('input',e=>{const q=e.target.value.trim();q?renderSearch(q):renderRoute();});
-$('#import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>Math.max(10000000,ALL.length*20000*4+1000000))throw Error('Большой файл');const incoming=sanitize(JSON.parse(await file.text()));state={version:2,done:[...new Set([...state.done,...incoming.done])],notes:{...state.notes,...incoming.notes},projectDone:[...new Set([...state.projectDone,...incoming.projectDone])],last:incoming.last||state.last};persist();renderRoute();toast(storageOK?'Прогресс восстановлен':'Загружено, но браузер не сохранил данные');}catch{toast('Файл не подходит. Поддерживается JSON-копия из QA Path.');}e.target.value='';});
+$('#import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>Math.max(10000000,ALL.length*20000*4+1000000))throw Error('Большой файл');const incoming=sanitize(JSON.parse(await file.text()));state=mergeProgress(state,incoming);persist();renderRoute();toast(storageOK?'Прогресс восстановлен':'Загружено, но браузер не сохранил данные');}catch{toast('Файл не подходит. Поддерживается JSON-копия из QA Path.');}e.target.value='';});
 $('#menu-toggle').addEventListener('click',()=>{document.body.classList.toggle('menu-open');$('#menu-toggle').setAttribute('aria-expanded',document.body.classList.contains('menu-open'));});$('#overlay').addEventListener('click',closeMenu);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus();}if(e.target.getAttribute('role')==='tab'&&['ArrowUp','ArrowDown','Home','End'].includes(e.key)){e.preventDefault();const tabs=[...$('#topic-nav').querySelectorAll('button')];const i=tabs.indexOf(e.target);const next=tabs[e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowDown'?1:-1)+tabs.length)%tabs.length];tabs.forEach(t=>t.tabIndex=t===next?0:-1);next.focus();}});
 window.addEventListener('hashchange',renderRoute);
